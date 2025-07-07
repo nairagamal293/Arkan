@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شاركنا الأرباح - أركان</title>
+    
+    <!-- Bootstrap 5 RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+    
+    
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #41AED9;
+            --accent-color: #e74c3c;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --text-color: #495057;
+            --border-radius: 8px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease-in-out;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        
+        /* Hero Section */
+        .profit-hero {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), 
+                        url('images/business-concept-with-graphic-holography.jpg') center/cover no-repeat;
+            height: 60vh;
+            min-height: 450px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .profit-hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease;
+        }
+        
+        .profit-hero p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-right: auto;
+            margin-left: auto;
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        /* About Section */
+        .about-profit {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .profit-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 40px;
+            height: 100%;
+            transition: var(--transition);
+        }
+        
+        .profit-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .profit-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .profit-card h3:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            right: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+        
+        /* Form Section */
+        .profit-form-section {
+            padding: 80px 0;
+            background-color: #f8f9fa;
+        }
+        
+        .form-card {
+            background-color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .form-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+        }
+        
+        .form-container {
+            padding: 40px;
+        }
+        
+        /* Form Elements */
+        .form-floating {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        
+        .form-control {
+            border-radius: var(--border-radius);
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 0.25rem rgba(65, 174, 217, 0.25);
+        }
+        
+        .form-label {
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            color: #6c757d;
+            transition: var(--transition);
+            pointer-events: none;
+            background-color: white;
+            padding: 0 5px;
+            border-radius: 4px;
+        }
+        
+        .form-control:focus ~ .form-label,
+        .form-control:not(:placeholder-shown) ~ .form-label {
+            top: -10px;
+            right: 10px;
+            font-size: 12px;
+            color: var(--secondary-color);
+        }
+        
+        /* Buttons */
+        .btn {
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 50px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            border: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--secondary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #16a085;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(26, 188, 156, 0.3);
+        }
+        
+        .btn-outline-primary {
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            background-color: transparent;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--secondary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(26, 188, 156, 0.3);
+        }
+        
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            background-color: #25d366;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-float:hover {
+            background-color: #128c7e;
+            color: white;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .profit-hero {
+                height: 50vh;
+                min-height: 350px;
+            }
+            
+            .profit-hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .profit-hero p {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .profit-hero {
+                height: 45vh;
+                min-height: 300px;
+            }
+            
+            .profit-hero h1 {
+                font-size: 2.3rem;
+            }
+            
+            .form-container {
+                padding: 30px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .profit-hero {
+                height: 40vh;
+                min-height: 250px;
+            }
+            
+            .profit-hero h1 {
+                font-size: 2rem;
+            }
+            
+            .profit-hero p {
+                font-size: 1rem;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 25px;
+                bottom: 20px;
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/+966564879767" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <!-- Logo on the left -->
+            <a class="navbar-brand order-lg-1 me-lg-5" href="index.html">
+                <img style="width: 120px;" src="/images/011-3-removebg-preview.png" alt="أركان لدراسات الجدوى"> 
+            </a>
+            
+            <!-- Toggler button -->
+            <button class="navbar-toggler order-lg-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Nav items in center -->
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">من نحن</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                            خدماتنا
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><h6 class="dropdown-header">دراسات الجدوى</h6></li>
+                            <li><a class="dropdown-item" href="/Services/MarketingStudy">دراسة تسويقية</a></li>
+                            <li><a class="dropdown-item" href="/Services/DetailedStudy">دراسة فنية</a></li>
+                            <li><a class="dropdown-item" href="/Services/FinancialStudy">دراسة مالية</a></li>
+                            
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">تحليل السوق</h6></li>
+                            <li><a class="dropdown-item" href="/Services/Pricing">تحليل سعر المنتج</a></li>
+                            <li><a class="dropdown-item" href="/Services/Stability">تحليل الاستقرار السعري</a></li>
+                            <li><a class="dropdown-item" href="/Services/Competitors">دراسة منافسين</a></li>
+                            
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">خطوط انتاج</h6></li>
+                            <li><a class="dropdown-item" href="/Services/European">أوروبية</a></li>
+                            <li><a class="dropdown-item" href="/Services/Chinese">صينية</a></li>
+                            
+                            <li><hr class="dropdown-divider"></li>
+                            <li><h6 class="dropdown-header">خدمات متنوعة</h6></li>
+                            <li><a class="dropdown-item" href="/Services/AccountingBalance">مراجعة ميزانيات</a></li>
+                            <li><a class="dropdown-item" href="/Services/EstimatedBudgets">إعداد موازنات تقديريه</a></li>
+                            <li><a class="dropdown-item" href="/Services/FinancialStatements">إعداد قوائم مالية</a></li>
+                            <li><a class="dropdown-item" href="/Services/Tax">حساب الضريبة والزكاة</a></li>
+                            <li><a class="dropdown-item" href="/Services/Strategy">خطط استراتيجية</a></li>
+                            <li><a class="dropdown-item" href="/Services/Export">خطة تصديرية</a></li>
+                            <li><a class="dropdown-item" href="/Services/Marketing">خطة تسويق</a></li>
+                            <li><a class="dropdown-item" href="/Services/Financing">حلول تمويل</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="Invest.html">الفرص الاستثمارية</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="EconomicDepartments.html">الاقسام الاقتصادية</a>
+                    </li>
+                    
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="worldDropdown" role="button" data-bs-toggle="dropdown">
+                            عالم التجارة والصناعة
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="/sections/SupportedProjects">مشروعات تدعمها الدولة</a></li>
+                            <li><a class="dropdown-item" href="/sections/MainProjects">اهم المشروعات</a></li>
+                            <li><a class="dropdown-item" href="/blogs">مقالات</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link active" href="ProfitWithUs.html">شاركنا الارباح</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">تواصل معنا</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Button on the right -->
+            <div class="d-flex align-items-center order-lg-4 ms-lg-3">
+                <a href="contact.html" class="btn btn-primary">
+                    <i class="fas fa-briefcase me-1"></i> استشارة مجانية
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="profit-hero">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h1 class="mb-4">شاركنا الأرباح</h1>
+                    <p class="lead">انضم إلى برنامج شركائنا وكن جزءًا من نجاحنا. اكتشف فرص التعاون المربحة مع أركان لدراسات الجدوى</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Profit Section -->
+    <section class="about-profit">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="mb-3">مبادرة أركان للشراكة المربحة</h2>
+                    <p class="text-muted">فرصة للتعاون وبناء علاقات استثمارية ناجحة</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="profit-card">
+                        <h3>فكرة البرنامج</h3>
+                        <p>هذه مبادرة يقدمها مكتب "أركان" لخلق آفاق جديدة للتعاون مع قطاعات مختلفة حيث يمكنك التسجيل كمندوب لنا ونتعاون سويًا في خدمة الاقتصاد العربي في أكثر من محور.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="profit-card">
+                        <h3>كيف تعمل؟</h3>
+                        <p>عندما تقوم بإحالة عميل لنا، ستحصل على نسبة من الأرباح حسب نوع الخدمة المقدمة. كلما زاد عدد العملاء الذين تحيلهم، زادت أرباحك.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="profit-card">
+                        <h3>مميزات البرنامج</h3>
+                        <ul>
+                            <li>نسب ربح تنافسية</li>
+                            <li>دفعات شهرية منتظمة</li>
+                            <li>دعم فني وتسويقي كامل</li>
+                            <li>تقارير دورية عن أدائك</li>
+                            <li>فرص للترقية وتحقيق دخل أعلى</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section -->
+    <section class="profit-form-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="form-card">
+                        <div class="form-container">
+                            <h2 class="mb-4 text-center">سجل معنا الآن</h2>
+                            <p class="text-center text-muted mb-5">املأ النموذج أدناه وسنتصل بك لتوضيح تفاصيل البرنامج</p>
+                            
+                            <form id="profitForm">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="txtname" placeholder=" " required>
+                                            <label for="txtname">الاسم الكامل</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="txtemail" placeholder=" " required>
+                                            <label for="txtemail">البريد الإلكتروني</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="tel" class="form-control" id="txtphone" placeholder=" " required>
+                                            <label for="txtphone">رقم الهاتف</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="txtbusiness" placeholder=" ">
+                                            <label for="txtbusiness">مجال عملك (اختياري)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="txtmessage" rows="5" placeholder=" "></textarea>
+                                    <label for="txtmessage">أخبرنا عن خبراتك وسبب رغبتك في الانضمام</label>
+                                </div>
+                                
+                                <div class="form-group mb-4">
+                                    <div id="recaptcha"></div>
+                                </div>
+                                
+                                <div class="d-flex justify-content-between mt-4">
+                                    <button type="submit" class="btn btn-primary px-4" id="Button1" disabled>
+                                        <i class="fas fa-paper-plane me-2"></i> إرسال الطلب
+                                    </button>
+                                    <button type="reset" class="btn btn-outline-primary px-4">
+                                        <i class="fas fa-eraser me-2"></i> مسح النموذج
+                                    </button>
+                                </div>
+                                
+                                <div id="Result" class="mt-3 text-center"></div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h3 class="mb-3">هل لديك استفسارات عن برنامج الشراكة؟</h3>
+                    <p class="mb-lg-0">اتصل بنا اليوم واحصل على جميع التفاصيل التي تحتاجها للبدء في كسب الأرباح معنا.</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="tel:+966544902462" class="btn btn-primary btn-lg">
+                        <i class="fas fa-phone-alt me-2"></i> اتصل بنا الآن
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+      <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">اهم الروابط</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li class="mb-2"><a href="/Home">الرئيسية</a></li>
+                                <li class="mb-2"><a href="/About">من نحن</a></li>
+                                <li class="mb-2"><a href="/sections/MainProjects">اهم المشروعات</a></li>
+                                <li class="mb-2"><a href="Invest.html">الفرص الاستثمارية</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li class="mb-2"><a href="EconomicDepartments.html">الاقسام الاقتصادية</a></li>
+                                <li class="mb-2"><a href="contact.html">تواصل معنا</a></li>
+                                <li class="mb-2"><a href="/blogs">المدونة</a></li>
+                                <li class="mb-2"><a href="ProfitWithUs.html">شاركنا الأرباح</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">أحدث المقالات</h5>
+                    
+                    <div class="mb-3">
+                        <a href="/blogs/2020/دراسة جدوى" class="d-flex text-decoration-none text-white-50">
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="text-white mb-0">مكتب أركان لدراسات الجدوى الاقتصادية المفصلة</h6>
+                                <small>5/2/2020</small>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <a href="/blogs/2020/www.arkkaan.com/blogs/2020/" class="d-flex text-decoration-none text-white-50">
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="text-white mb-0">مكتب أركان لدراسات الجدوى الاقتصادية المفصلة</h6>
+                                <small>5/2/2020</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">اتـصـل بـنـا</h5>
+                    
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                            نخدم جميع أنحاء المملكة العربية السعودية ودراسة الجدوى التي نقدمها توافي شروط البنك الدولي ومعتمدة لدى جميع جهات التمويل
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-2 text-primary"></i>
+                            <a href="mailto:info@arkaan.com" class="text-white-50">info@arkaan.com</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone-alt me-2 text-primary"></i>
+                            <a href="tel:+966544902462" class="text-white-50">+966 54 490 2462</a> / 
+                            <a href="tel:+966567473356" class="text-white-50">+966 56 747 3356</a>
+                        </li>
+                    </ul>
+                    
+                    <h5 class="text-white mt-4 mb-3">طرق الدفع</h5>
+                    <div class="payment-methods">
+                        <img src="images/download (13).jpeg" alt="طريقة دفع">
+                        <img src="images/download (11).jpeg" alt="طريقة دفع">
+                        <img src="images/Mit PayPal Geld senden - so funktioniert's.jpeg" alt="طريقة دفع">
+                        <img src="images/Main sponsor_Western Union.jpeg" alt="طريقة دفع">
+                        <img src="images/1 Bed, 1 Bath & Loft Modern Tiny Home On Wheels - 399 sqft.jpeg" alt="طريقة دفع">
+                        <img src="images/download (12).jpeg" alt="طريقة دفع">
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-secondary">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <a href="/Home" class="d-inline-block">
+                        <img src="images/011-3-removebg-.png" alt="أركان لدراسات الجدوى" height="45">
+                    </a>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="d-flex align-items-center justify-content-md-end">
+                        <p class="mb-0 me-3 text-white-50">تـابـعـونـا:</p>
+                        <div>
+                            <a href="https://www.facebook.com/companyarkan" class="social-icon me-2">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/arkancompany1?lang=ar" class="social-icon me-2">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0 text-white-50">
+                        <span id="copyright-year"></span> &copy; جميع الحقوق محفوظة لشركة أركان لدراسات الجدوى
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">شروط الخدمة</a>
+                    <a href="#" class="text-white-50">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&data-callback=recaptcha_callback" async defer></script>
+    
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Set current year in copyright
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        
+        // ReCAPTCHA functions
+        var onloadCallback = function() {
+            grecaptcha.render('recaptcha', {
+                'sitekey': '6LcyvF8pAAAAANJZEdq4vEiCuYPXeKqahbGurvdB',
+                'callback': recaptcha_callback,
+                'expired-callback': recaptchaExpired_callback
+            });
+        };
+
+        function recaptcha_callback() {
+            $('#Button1').prop('disabled', false);
+        }
+
+        function recaptchaExpired_callback() {
+            $('#Button1').prop('disabled', true);
+        }
+        
+        // Form submission
+        function InsertcomplainRecord() {
+            var Name = $('#txtname').val();
+            var phone = $('#txtphone').val();
+            var Email = $('#txtemail').val();
+            var message = $('#txtmessage').val();
+
+            var Resultmsg = "";
+
+            if (Name.length == 0 || phone.length == 0 || Email.length == 0) {
+                alert('أكمل بيانات النموذج من فضلك!');
+                return;
+            }
+
+            if (Resultmsg.length == 0) {
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    url: "earnings.aspx/InsertcomplainRecord",
+                    data: "{'Name':'" + Name + "', 'phone':'" + phone + "', 'Email':'" + Email + "','message':'" + message + "'}",
+                    success: function(data) {
+                        if (data.d.IsSuccess) {
+                            window.location.assign("ThankYou/");
+                        }
+                        else {
+                            alert(data.d.Message);
+                        }
+                    },
+                    Error: function(textMsg) {
+                        $('#Result').text("Error: " + Error);
+                    }
+                });
+            }
+            else {
+                $('#Result').html('');
+                $('#Result').html(Resultmsg);
+            }
+            $('#Result').fadeIn();
+        }
+        
+        // Form validation
+        $('#profitForm').on('submit', function(e) {
+            e.preventDefault();
+            InsertcomplainRecord();
+        });
+    </script>
+</body>
+</html>

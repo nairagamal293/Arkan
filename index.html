@@ -1,0 +1,1896 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دراسة جدوى - أركان</title>
+    
+    <!-- Bootstrap 5 RTL -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    
+    <style>
+        :root {
+            --primary-color: #41AED9;
+            --secondary-color: #000000;
+            --accent-color: #25d366;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --text-color: #495057;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            color: var(--text-color);
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Carousel */
+        .hero-carousel {
+            position: relative;
+            height: 60vh;
+            min-height: 600px;
+            overflow: hidden;
+        }
+        
+        .hero-carousel .carousel-inner,
+        .hero-carousel .carousel-item {
+            height: 100%;
+        }
+        
+        .hero-slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            z-index: 1;
+        }
+        
+        .hero-slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%);
+            z-index: -1;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 2;
+        }
+        
+        .hero-carousel h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeInDown 1s ease;
+        }
+        
+        .hero-carousel p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+            animation: fadeInUp 1s ease 0.3s both;
+        }
+        
+        .hero-buttons {
+            animation: fadeInUp 1s ease 0.6s both;
+        }
+        
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .hero-carousel:hover .carousel-control-prev,
+        .hero-carousel:hover .carousel-control-next {
+            opacity: 1;
+        }
+        
+        .carousel-control-prev {
+            right: 20px;
+            left: auto;
+        }
+        
+        .carousel-control-next {
+            left: 20px;
+            right: auto;
+        }
+        
+        .carousel-indicators {
+            bottom: 30px;
+        }
+        
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+        }
+        
+        .carousel-indicators button.active {
+            background-color: var(--primary-color);
+            transform: scale(1.3);
+        }
+        
+        /* Slide-specific backgrounds */
+        .slide-1 {
+            background-image: url('images/Quel\ est\ le\ budget\ des\ courses\ pour\ deux\ personnes\ en\ 2024\ _.png');
+        }
+        
+        .slide-2 {
+            background-image: url('images/download\ \(16\).jpeg');
+        }
+        
+        .slide-3 {
+            background-image: url('images/download\ \(17\).jpeg');
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-carousel {
+                height: 80vh;
+                min-height: 500px;
+            }
+            
+            .hero-carousel h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-carousel p {
+                font-size: 1rem;
+            }
+            
+            .carousel-control-prev,
+            .carousel-control-next {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero-carousel {
+                height: 70vh;
+                min-height: 400px;
+            }
+            
+            .hero-carousel h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        /* Updated Navbar Styles */
+        .navbar {
+            background-color: white !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            
+            
+        }
+        
+        .navbar.scrolled {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .nav-link {
+            color: var(--dark-color) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s;
+            position: relative;
+            
+        }
+        
+        .nav-link:hover,
+        .nav-link:focus,
+        .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 2px;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after,
+        .nav-link.active:after {
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+        
+        .dropdown-menu {
+            background-color: white;
+            border: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .dropdown-item {
+            color: var(--dark-color);
+            transition: all 0.2s;
+            padding: 0.5rem 1.5rem;
+        }
+        
+        .dropdown-item:hover,
+        .dropdown-item:focus {
+            background-color: #f8f9fa;
+            color: var(--primary-color);
+            padding-right: 2rem;
+        }
+        
+        .navbar-toggler {
+            border: none;
+            padding: 0.5rem;
+        }
+        
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+        
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+            transition: all 0.3s;
+        }
+        
+        .navbar-toggler:hover .navbar-toggler-icon {
+            transform: rotate(90deg);
+        }
+        
+        
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: 0;
+            width: 80px;
+            height: 3px;
+            background: var(--primary-color);
+            animation: lineGrow 1s ease-out;
+        }
+        
+        @keyframes lineGrow {
+            from { width: 0; }
+            to { width: 80px; }
+        }
+        
+        /* Service Cards */
+        .service-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            height: 100%;
+            background: white;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .service-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, var(--primary-color) 0%, rgba(65, 174, 217, 0.1) 100%);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-card:hover:before {
+            opacity: 1;
+        }
+        
+        .service-card:hover .service-icon {
+            color: white;
+            transform: scale(1.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Counter Section */
+        .counter-section {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    background-image: url('path-to-your-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optional - creates parallax effect */
+}
+
+.counter-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(5, 50, 68, 0.7) 0%, rgba(0, 0, 0, 0.9) 100%);
+    z-index: 0;
+}
+        
+        .counter-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .counter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            border-color: rgba(65, 174, 217, 0.3);
+        }
+        
+        .counter-card:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            z-index: -1;
+            transition: all 0.5s ease;
+            opacity: 0;
+        }
+        
+        .counter-card:hover:before {
+            animation: shine 1.5s;
+        }
+        
+        @keyframes shine {
+            0% { left: -50%; opacity: 0; }
+            50% { opacity: 1; }
+            100% { left: 150%; opacity: 0; }
+        }
+        
+        .counter-icon {
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .counter-card:hover .counter-icon {
+            transform: scale(1.1);
+        }
+        
+        .counter {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin: 15px 0;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .counter-line {
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 20px auto;
+            transition: all 0.3s ease;
+        }
+        
+        .counter-card:hover .counter-line {
+            width: 100px;
+            background: white;
+        }
+        
+        /* Testimonials */
+        .testimonial-box {
+            border: none;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin: 0 15px;
+            height: 100%;
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+        
+        .testimonial-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .testimonial-box:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: var(--primary-color);
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s ease;
+        }
+        
+        .testimonial-box:hover:before {
+            transform: scaleX(1);
+            transform-origin: left;
+        }
+        
+        .client-img-container {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid var(--primary-color);
+            padding: 3px;
+            transition: all 0.3s ease;
+            margin: 0 auto 20px;
+        }
+        
+        .testimonial-box:hover .client-img-container {
+            transform: scale(1.1);
+            box-shadow: 0 5px 15px rgba(65, 174, 217, 0.3);
+        }
+        
+        .client-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-box:hover .client-img {
+            transform: scale(1.05);
+        }
+        
+        .carousel-indicators {
+            position: static;
+            margin: 30px 0 0;
+            justify-content: center;
+        }
+        
+        .carousel-indicators button {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: rgba(0, 0, 0, 0.2);
+            border: none;
+            margin: 0 8px;
+            transition: all 0.3s;
+            opacity: 1;
+        }
+        
+        .carousel-indicators button.active {
+            background-color: var(--primary-color);
+            width: 35px;
+            border-radius: 10px;
+            transform: scale(1.1);
+        }
+        
+        .testimonial-content {
+            position: relative;
+            padding: 30px;
+        }
+        
+        .rating {
+            color: #ffc107;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        
+        /* Features Section */
+        .feature-box {
+            text-align: center;
+            padding: 40px 25px;
+            border-radius: 15px;
+            background-color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .feature-box:before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 100%;
+            height: 0;
+            background: linear-gradient(to top, white, rgba(255, 255, 255, 0.7));
+            z-index: -1;
+            transition: all 0.4s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+            color: rgb(0, 0, 0);
+        }
+        
+        .feature-box:hover:before {
+            height: 100%;
+        }
+        
+        .feature-box:hover .feature-icon,
+        .feature-box:hover h4,
+        .feature-box:hover p {
+            color: rgb(0, 0, 0);
+        }
+        
+        .feature-icon {
+            font-size: 2.8rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-box:hover .feature-icon {
+            transform: rotateY(180deg);
+        }
+        
+        /* Project Cards */
+        .project-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            height: 100%;
+        }
+        
+        .project-card img {
+            transition: all 0.5s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(247, 247, 247, 0.15);
+        }
+        
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .project-card .card-body {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .project-card:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(2, 38, 130, 0.1), rgba(0, 0, 0, 0.7));
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover:after {
+            opacity: 1;
+        }
+        
+        .project-card .card-title {
+            transition: all 0.3s ease;
+        }
+        
+        .project-card:hover .card-title {
+            color: white;
+        }
+        
+        /* Buttons */
+        .btn {
+            font-weight: 500;
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .btn:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.2);
+            transition: all 0.3s ease;
+            z-index: -1;
+        }
+        
+        .btn:hover:before {
+            width: 100%;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+        }
+        
+        .btn-primary:hover {
+            background-color: #3a9cc8;
+            border-color: #3a9cc8;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(65, 174, 217, 0.3);
+        }
+        
+        .btn-whatsapp {
+            background-color: var(--accent-color);
+            color: white;
+        }
+        
+        .btn-whatsapp:hover {
+            background-color: #1da851;
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+        }
+        
+        .btn-outline-primary {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(65, 174, 217, 0.3);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(65, 174, 217, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%);
+            z-index: 0;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            transform: translateX(-5px);
+        }
+        
+        .footer-links a:hover:after {
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: white;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(65, 174, 217, 0.3);
+        }
+        
+        .payment-methods img {
+            height: 30px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+            opacity: 0.7;
+        }
+        
+        .payment-methods img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: translateY(-3px);
+        }
+        
+        /* Contact Form */
+        .contact-form {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-form:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, var(--primary-color), #25d366);
+        }
+        
+        .form-control {
+            border-radius: 8px;
+            padding: 12px 15px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.3s ease;
+        }
+        
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.25rem rgba(65, 174, 217, 0.25);
+        }
+        
+        .form-label {
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            color: #6c757d;
+            transition: all 0.3s;
+            pointer-events: none;
+            background-color: white;
+            padding: 0 5px;
+            border-radius: 4px;
+        }
+        
+        .form-control:focus + .form-label,
+        .form-control:not(:placeholder-shown) + .form-label {
+            top: -10px;
+            right: 10px;
+            font-size: 12px;
+            color: var(--primary-color);
+            transform: translateY(0);
+        }
+        
+        /* WhatsApp Float Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: var(--accent-color);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: pulse 2s infinite;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1) rotate(10deg);
+            color: white;
+            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+            animation: none;
+        }
+        
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 100px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                left: 20px;
+            }
+            
+            .feature-box,
+            .service-card,
+            .counter-card {
+                margin-bottom: 20px;
+            }
+            
+            .testimonial-box {
+                margin: 0 5px;
+            }
+            
+            .client-img-container {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-1 {
+            transition-delay: 0.2s;
+        }
+        
+        .delay-2 {
+            transition-delay: 0.4s;
+        }
+        
+        .delay-3 {
+            transition-delay: 0.6s;
+        }
+    </style>
+</head>
+<body>
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/+966564879767" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Navigation Bar -->
+    <!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container">
+        <!-- Logo on the left -->
+        <a class="navbar-brand order-lg-1 me-lg-5" href="/Home">
+            <img style="width: 100px;" src="/images/011-3-removebg-preview.png" alt="أركان لدراسات الجدوى"> 
+        </a>
+        
+        <!-- Toggler button -->
+        <button class="navbar-toggler order-lg-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Nav items in center -->
+        <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i> الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">من نحن</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown">
+                        خدماتنا
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><h6 class="dropdown-header">دراسات الجدوى</h6></li>
+                        <li><a class="dropdown-item" href="Services/MarketingStudy.html">دراسة تسويقية</a></li>
+                        <li><a class="dropdown-item" href="Services/DetailedStudy.html">دراسة فنية</a></li>
+                        <li><a class="dropdown-item" href="Services/FinancialStudy.html">دراسة مالية</a></li>
+                        
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">تحليل السوق</h6></li>
+                        <li><a class="dropdown-item" href="Services/Pricing.html">تحليل سعر المنتج</a></li>
+                        <li><a class="dropdown-item" href="Services/Stability.html">تحليل الاستقرار السعري</a></li>
+                        <li><a class="dropdown-item" href="Services/Competitors.html">دراسة منافسين</a></li>
+                        
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">خطوط انتاج</h6></li>
+                        <li><a class="dropdown-item" href="Services/European.html">أوروبية</a></li>
+                        <li><a class="dropdown-item" href="Services/Chinese.html">صينية</a></li>
+                        
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">خدمات متنوعة</h6></li>
+                        <li><a class="dropdown-item" href="Services/AccountingBalance.html">مراجعة ميزانيات</a></li>
+                        <li><a class="dropdown-item" href="Services/EstimatedBudgets.html">إعداد موازنات تقديريه</a></li>
+                        <li><a class="dropdown-item" href="Services/FinancialStatements.html">إعداد قوائم مالية</a></li>
+                        <li><a class="dropdown-item" href="Services/Tax.html">حساب الضريبة والزكاة</a></li>
+                        <li><a class="dropdown-item" href="Services/Strategy.html">خطط استراتيجية</a></li>
+                        <li><a class="dropdown-item" href="Services/Export.html">خطة تصديرية</a></li>
+                        <li><a class="dropdown-item" href="Services/Marketing.html">خطة تسويق</a></li>
+                        <li><a class="dropdown-item" href="Services/Financing.html">حلول تمويل</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="Invest.html">الفرص الاستثمارية</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="EconomicDepartments.html">الاقسام الاقتصادية</a>
+                </li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="worldDropdown" role="button" data-bs-toggle="dropdown">
+                        عالم التجارة والصناعة
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="/sections/SupportedProjects">مشروعات تدعمها الدولة</a></li>
+                        <li><a class="dropdown-item" href="/sections/MainProjects">اهم المشروعات</a></li>
+                        <li><a class="dropdown-item" href="/blogs">مقالات</a></li>
+                    </ul>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="ProfitWithUs.html">شاركنا الارباح</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">تواصل معنا</a>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Button on the right -->
+        <div class="d-flex align-items-center order-lg-4 ms-lg-3">
+            <a href="contact.html" class="btn btn-primary">
+                <i class="fas fa-briefcase me-1"></i> استشارة مجانية
+            </a>
+        </div>
+    </div>
+</nav>
+
+    <!-- Hero Section -->
+     <!-- Hero Carousel Section -->
+    <section class="hero-carousel carousel slide" data-bs-ride="carousel" id="heroCarousel">
+       
+        
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="hero-slide slide-1">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold">اطلب دراسة جدوى مفصلة</h1>
+                        <p class="lead">ابدأ عملك الان مع دراسات جدوى واقعية مفصلة توافي شروط جهات التمويل</p>
+                        <div class="hero-buttons d-flex justify-content-center gap-3">
+                            <a href="/ContactUs" class="btn btn-primary btn-lg px-4">اطلب دراسة جدوى الان</a>
+                            <a href="https://wa.me/+966564879767" class="btn btn-whatsapp btn-lg px-4">
+                                <i class="fab fa-whatsapp me-2"></i> تواصل عبر واتساب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="hero-slide slide-2">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold">الاستثمار الناجح يبدأ بدراسة الجدوى</h1>
+                        <p class="lead">نقدم دراسات جدوى دقيقة تساعدك على اتخاذ القرارات الاستثمارية الصحيحة</p>
+                        <div class="hero-buttons d-flex justify-content-center gap-3">
+                            <a href="/Services" class="btn btn-primary btn-lg px-4">استكشف خدماتنا</a>
+                            <a href="/ContactUs" class="btn btn-outline-light btn-lg px-4">تواصل مع الخبراء</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="hero-slide slide-3">
+                    <div class="hero-content">
+                        <h1 class="display-4 fw-bold">فرص استثمارية مميزة</h1>
+                        <p class="lead">اكتشف أحدث الفرص الاستثمارية المدروسة بعناية لتحقيق أعلى العوائد</p>
+                        <div class="hero-buttons d-flex justify-content-center gap-3">
+                            <a href="index.html" class="btn btn-primary btn-lg px-4">عرض الفرص</a>
+                            <a href="/ContactUs" class="btn btn-outline-light btn-lg px-4">استشارة مجانية</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </section>
+
+
+    <!-- Features Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h4>القسم الصناعي</h4>
+                        <p class="mb-0">دراسات جدوى متكاملة للمشاريع الصناعية بجميع أنواعها</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll delay-1">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-usd"></i>
+                        </div>
+                        <h4>القسم الخدمي/التجاري</h4>
+                        <p class="mb-0">تحليلات دقيقة للمشاريع التجارية والخدمية</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll delay-2">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h4>القسم الزراعي</h4>
+                        <p class="mb-0">دراسات متخصصة للمشاريع الزراعية وتربية المواشي</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h4>القسم التعليمي</h4>
+                        <p class="mb-0">خطط استثمارية للمؤسسات التعليمية والتدريبية</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll delay-1">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-user-md"></i>
+                        </div>
+                        <h4>القسم الصحي</h4>
+                        <p class="mb-0">دراسات جدوى للمستشفيات والعيادات والمراكز الطبية</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 animate-on-scroll delay-2">
+                    <div class="feature-box">
+                        <div class="feature-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h4>القسم السياحي</h4>
+                        <p class="mb-0">تحليلات للمشاريع السياحية والفندقية والترفيهية</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Counter Section -->
+    <section class="counter-section py-5 position-relative overflow-hidden" style="background-image: url('images/127372.jpg');">
+        <div class="container position-relative z-index-1">
+            <h2 class="text-center text-white mb-4 animate-on-scroll">حقائق رقمية</h2>
+            <p class="text-center text-white mb-5 opacity-75 animate-on-scroll delay-1">ترغب فى معرفة المزيد عن شركتنا، شاهد نتائجنا وسوف تعرفنا</p>
+            
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-6 col-lg-3 mb-4 animate-on-scroll">
+                    <div class="counter-card">
+                        <div class="counter-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <div class="counter display-4 fw-bold text-primary mb-2" data-count="5600">0</div>
+                        <h4 class="text-white text-uppercase fs-6 mb-0">دراسة جدوى</h4>
+                        <div class="counter-line mt-3 mx-auto"></div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4 animate-on-scroll delay-1">
+                    <div class="counter-card">
+                        <div class="counter-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <div class="counter display-4 fw-bold text-primary mb-2" data-count="550">0</div>
+                        <h4 class="text-white text-uppercase fs-6 mb-0">فرص استثمارية</h4>
+                        <div class="counter-line mt-3 mx-auto"></div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4 animate-on-scroll delay-2">
+                    <div class="counter-card">
+                        <div class="counter-icon">
+                            <i class="fas fa-smile"></i>
+                        </div>
+                        <div class="counter display-4 fw-bold text-primary mb-2" data-count="9000">0</div>
+                        <h4 class="text-white text-uppercase fs-6 mb-0">عميل راضي</h4>
+                        <div class="counter-line mt-3 mx-auto"></div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 mb-4 animate-on-scroll delay-3">
+                    <div class="counter-card">
+                        <div class="counter-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="counter display-4 fw-bold text-primary mb-2" data-count="8000">0</div>
+                        <h4 class="text-white text-uppercase fs-6 mb-0">استشارة</h4>
+                        <div class="counter-line mt-3 mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <div class="d-flex flex-column flex-md-row justify-content-center gap-3 align-items-center">
+                    <a href="/ContactUs" class="btn btn-primary px-4 py-2 rounded-pill shadow-sm animate-on-scroll">
+                        <i class="fas fa-phone-alt me-2"></i> تواصل معنا
+                    </a>
+                    <span class="text-white d-flex align-items-center my-2 my-md-0 animate-on-scroll delay-1">أو</span>
+                    <a href="/About" class="btn btn-outline-light px-4 py-2 rounded-pill shadow-sm animate-on-scroll delay-2">
+                        <i class="fas fa-info-circle me-2"></i> من نحن
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Animated Background Elements -->
+        <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden z-index-0">
+            <div class="counter-circle circle-1"></div>
+            <div class="counter-circle circle-2"></div>
+            <div class="counter-circle circle-3"></div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title animate-on-scroll">ماذا نقدم</h2>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4 animate-on-scroll">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-money-bill-wave"></i>
+                            </div>
+                            <h4 class="card-title">حلول تمويل</h4>
+                            <p class="card-text">نحن نسعى جاهدين إلى أن نقدم لعملائنا الكرام خريطة مفصلة عن أهم جهات التمويل والدعم وشرح مفصل لاشتراطات كل جهة ومتطلباتها، كما نقدم حلول جيدة حول كيفية الحصول على دعم وذلك من خلال خبرات المستشاريين لدينا في السوق وتعملاتنا التي تزيد عن عقد داخل سوق التجارة والصناعة.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 animate-on-scroll delay-1">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h4 class="card-title">تحليل منافسين</h4>
+                            <p class="card-text">نقوم بدراسة وتحليل السوق المستهدف وقياس حجم العرض والطلب ونفصل حجم المعروض من المنتجات المنافسة وندرس نقطات القوة والضعف لديهم ونحسب حجم الطلب استنادا إلى العوامل المتحكمة بالطلب وحساب التوقعات الاحتمالية لحجم البيع المتوقع.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 animate-on-scroll delay-2">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-file-invoice-dollar"></i>
+                            </div>
+                            <h4 class="card-title">دراسة الجدوي</h4>
+                            <p class="card-text">تعتبر دراسة الجدوى بمثابة المنارة التي تضيء للمستثمر طريقة وترشده في اختيار القرار الأفضل لتحركاته الاقتصادية، نعتمد على فريق من الاستشاريين والخبراء الماليين تزيد خبرتهم بالسوق عن 10 سنوات من العمل في سوق التجارة والصناعة بالشرق الاوسط ومنطقة الخليج العربي.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 animate-on-scroll">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h4 class="card-title">خطوط إنتاج</h4>
+                            <p class="card-text">نعتمد على خبرة فريق بحثي لديه شبكة علاقات واسعة مع 80% من شركات خطوط الانتاج في العالم، وفي حال أن مشروعكم صناعي فنحن نعد أنفسنا بشهادة العملاء أفضل جهة يمكن أن تتعامل معها إذ نوفر لك عرض فني مرفق بالاسعار لأفضل خط انتاج لمصنعك بأعلى جودة وأفضل سعر.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 animate-on-scroll delay-1">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h4 class="card-title">إعداد خطط استراتيجية</h4>
+                            <p class="card-text">تحدد الخطة الاستراتيجية للمؤسسات أفضل النقلات التي يمكن أن تتخذها والأولويات التي يترتب عليها تحديد أهداف المراحل المقبلة وطرق تحقيق أفضل أداء والحصول على مساحات أكبر من السوق المستهدف بالاضافة إلى تحديد المعوقات والفرص المتاحة والعمل على قنص مكاسب أكبر ورسم صورة أوضح لخارطة الطريق.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 animate-on-scroll delay-2">
+                    <div class="service-card card h-100">
+                        <div class="card-body text-center">
+                            <div class="service-icon">
+                                <i class="fas fa-project-diagram"></i>
+                            </div>
+                            <h4 class="card-title">إعداد موازنات تقديرية</h4>
+                            <p class="card-text">نعمل على تقديم خطة وافية لتصدير منتجاتك وندرس لك جدوى تصديرها والفوائد المتوقعة والفرص المحتملة وأفضل البلاد التي يمكنك التعامل معها والتصدير لها بكل التفاصيل الفنية واللوجستية لذلك.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Form Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 animate-on-scroll">
+                    <div class="contact-form">
+                        <h3 class="text-center mb-4">استثمر معنا</h3>
+                        <p class="text-center text-muted mb-4">يمكنك أدخال راس المال وسنتواصل معك بافضل المشاريع</p>
+                        
+                        <form id="investmentForm">
+                            <div class="mb-3 position-relative">
+                                <input type="text" class="form-control" id="txtname" placeholder=" ">
+                                <label for="txtname" class="form-label">الاسم</label>
+                            </div>
+                            
+                            <div class="mb-3 position-relative">
+                                <input type="tel" class="form-control" id="txtphone" placeholder=" ">
+                                <label for="txtphone" class="form-label">الهاتف</label>
+                            </div>
+                            
+                            <div class="mb-3 position-relative">
+                                <input type="text" class="form-control" id="txtmoney" placeholder=" ">
+                                <label for="txtmoney" class="form-label">رأس المال</label>
+                            </div>
+                            
+                            
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg" id="Button1" disabled>أفضل المشروعات</button>
+                            </div>
+                            
+                            <div id="Result" class="mt-3 text-center"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Slider Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title animate-on-scroll">آراء عملائنا</h2>
+            <p class="text-center text-muted mb-5 animate-on-scroll delay-1">ما يقولونه عملاؤنا عن خدماتنا</p>
+            
+            <div class="row justify-content-center animate-on-scroll delay-2">
+                <div class="col-lg-10">
+                    <div id="testimonialsSlider" class="carousel slide" data-bs-ride="carousel">
+                        <!-- Indicators -->
+                        <div class="carousel-indicators mb-0">
+                            <button type="button" data-bs-target="#testimonialsSlider" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#testimonialsSlider" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#testimonialsSlider" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#testimonialsSlider" data-bs-slide-to="3"></button>
+                            <button type="button" data-bs-target="#testimonialsSlider" data-bs-slide-to="4"></button>
+                        </div>
+                        
+                        <!-- Slides -->
+                        <div class="carousel-inner px-4">
+                            <!-- Slide 1 -->
+                            <div class="carousel-item active">
+                                <div class="testimonial-box">
+                                    <div class="testimonial-content">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="client-img-container flex-shrink-0">
+                                                <img src="images/download (14).jpeg" alt="الدكتور أيمن عبد المجيد" class="client-img">
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5 class="mb-1">الدكتور أيمن عبد المجيد</h5>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">"تشرفت بالتعامل معكم، وممتن جدا لحسن المعاملة ولفريق العمل على المجهودات المبذولة، الله يوفقكم يا شباب"</p>
+                                        <small class="text-muted d-block mt-2"><i class="far fa-calendar-alt me-1"></i> 15 يناير 2023</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 2 -->
+                            <div class="carousel-item">
+                                <div class="testimonial-box">
+                                    <div class="testimonial-content">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="client-img-container flex-shrink-0">
+                                                <img src="images/بورترية.jpeg" alt="محسن الشمري" class="client-img">
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5 class="mb-1">محسن الشمري</h5>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star-half-alt"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">"من أفضل الشركات في مجال الاستشارات حصلت على تمويل من صندوق التنمية الاجتماعي لمشروعي بفضل دراستكم بعد تقديم الملف من ثلاث شركات أخرى وتم رفضه.. شكرا أركان"</p>
+                                        <small class="text-muted d-block mt-2"><i class="far fa-calendar-alt me-1"></i> 2 مارس 2023</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 3 -->
+                            <div class="carousel-item">
+                                <div class="testimonial-box">
+                                    <div class="testimonial-content">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="client-img-container flex-shrink-0">
+                                                <img src="images/تصوير شخصي بورترية.jpeg" alt="سهيل عمر القحطاني" class="client-img">
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5 class="mb-1">سهيل عمر القحطاني</h5>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">"أركان من أهم الشركات التي يمكن تتعامل معها والتي تقدم خدمات بمنتهى الاحترافية والسرعة التنفيذ في وقت قياسي"</p>
+                                        <small class="text-muted d-block mt-2"><i class="far fa-calendar-alt me-1"></i> 10 فبراير 2023</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 4 -->
+                            <div class="carousel-item">
+                                <div class="testimonial-box">
+                                    <div class="testimonial-content">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="client-img-container flex-shrink-0">
+                                                <img src="images/Check out photo effects collection by Abderrzek Djerroud on Photo Lab.jpeg" alt="محمد عبيد" class="client-img">
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5 class="mb-1">محمد عبيد</h5>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="far fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">"الموقع متعاون جدا ودراساته شاملة لكافة المعلومات الخاصة بمشروعي ولديه فريق عمل متميز ولديهم رؤية واضحة انصح الجميع بالتعامل معهم"</p>
+                                        <small class="text-muted d-block mt-2"><i class="far fa-calendar-alt me-1"></i> 5 ديسمبر 2022</small>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Slide 5 -->
+                            <div class="carousel-item">
+                                <div class="testimonial-box">
+                                    <div class="testimonial-content">
+                                        <div class="d-flex align-items-center mb-4">
+                                            <div class="client-img-container flex-shrink-0">
+                                                <img src="images/download (15).jpeg" alt="عماد الشمري" class="client-img">
+                                            </div>
+                                            <div class="ms-3">
+                                                <h5 class="mb-1">عماد الشمري</h5>
+                                                <div class="rating">
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="mb-0">"تعاون مثمر ورقي في الإداء الفني والانساني اتمنى توفير وقت للتعلم من خبرات فريق العمل، شاكر للتعاون المثمر"</p>
+                                        <small class="text-muted d-block mt-2"><i class="far fa-calendar-alt me-1"></i> 20 يناير 2023</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5 animate-on-scroll">
+                <a href="/ContactUs" class="btn btn-primary px-4">
+                    <i class="fas fa-comments me-2"></i> اترك رأيك عنا
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Latest Projects -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center section-title animate-on-scroll">أحدث الفرص الاستثمارية</h2>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll">
+                    <div class="project-card card h-100">
+                        <img src="images/original.jpg" class="card-img-top" alt="دراسة جدوى مشروع مصنع لإنتاج أدوات الدهانات">
+                        <div class="card-body">
+                            <h5 class="card-title">دراسة جدوى مشروع مصنع لإنتاج أدوات الدهانات</h5>
+                            <a href="/content/Feasibility study of a factory project for the production of paint tools" class="btn btn-primary mt-3">عرض التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll delay-1">
+                    <div class="project-card card h-100">
+                        <img src="images/original (1).jpg" class="card-img-top" alt="دراسة جدوى مشروع مصنع بطاريات سيارات">
+                        <div class="card-body">
+                            <h5 class="card-title">دراسة جدوى مشروع مصنع بطاريات سيارات</h5>
+                            <a href="/content/Feasibility Study of a Car Batteries Factory Project" class="btn btn-primary mt-3">عرض التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4 animate-on-scroll delay-2">
+                    <div class="project-card card h-100">
+                        <img src="images/original (2).jpg" class="card-img-top" alt="دراسة جدوى مصنع إنتاج فلاتر السيارات">
+                        <div class="card-body">
+                            <h5 class="card-title">دراسة جدوى مصنع إنتاج فلاتر السيارات</h5>
+                            <a href="/content/Feasibility study of the production plant for automotive filters" class="btn btn-primary mt-3">عرض التفاصيل</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-4 animate-on-scroll">
+                <a href="Invest.html" class="btn btn-outline-primary">عرض المزيد من الفرص</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+       <!-- Footer -->
+    <footer class="py-5 bg-dark text-white">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">اهم الروابط</h5>
+                    <div class="row">
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li class="mb-2"><a href="/Home">الرئيسية</a></li>
+                                <li class="mb-2"><a href="/About">من نحن</a></li>
+                                <li class="mb-2"><a href="/sections/MainProjects">اهم المشروعات</a></li>
+                                <li class="mb-2"><a href="Invest.html">الفرص الاستثمارية</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-6">
+                            <ul class="list-unstyled footer-links">
+                                <li class="mb-2"><a href="EconomicDepartments.html">الاقسام الاقتصادية</a></li>
+                                <li class="mb-2"><a href="contact.html">تواصل معنا</a></li>
+                                <li class="mb-2"><a href="/blogs">المدونة</a></li>
+                                <li class="mb-2"><a href="ProfitWithUs.html">شاركنا الأرباح</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">أحدث المقالات</h5>
+                    
+                    <div class="mb-3">
+                        <a href="/blogs/2020/دراسة جدوى" class="d-flex text-decoration-none text-white-50">
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="text-white mb-0">مكتب أركان لدراسات الجدوى الاقتصادية المفصلة</h6>
+                                <small>5/2/2020</small>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <a href="/blogs/2020/www.arkkaan.com/blogs/2020/" class="d-flex text-decoration-none text-white-50">
+                            <div class="flex-grow-1 ms-3">
+                                <h6 class="text-white mb-0">مكتب أركان لدراسات الجدوى الاقتصادية المفصلة</h6>
+                                <small>5/2/2020</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-4">
+                    <h5 class="text-white mb-4">اتـصـل بـنـا</h5>
+                    
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-3">
+                            <i class="fas fa-map-marker-alt me-2 text-primary"></i>
+                            نخدم جميع أنحاء المملكة العربية السعودية ودراسة الجدوى التي نقدمها توافي شروط البنك الدولي ومعتمدة لدى جميع جهات التمويل
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-envelope me-2 text-primary"></i>
+                            <a href="mailto:info@arkaan.com" class="text-white-50">info@arkaan.com</a>
+                        </li>
+                        <li class="mb-3">
+                            <i class="fas fa-phone-alt me-2 text-primary"></i>
+                            <a href="tel:+966544902462" class="text-white-50">+966 54 490 2462</a> / 
+                            <a href="tel:+966567473356" class="text-white-50">+966 56 747 3356</a>
+                        </li>
+                    </ul>
+                    
+                    <h5 class="text-white mt-4 mb-3">طرق الدفع</h5>
+                    <div class="payment-methods">
+                        <img src="images/download (13).jpeg" alt="طريقة دفع">
+                        <img src="images/download (11).jpeg" alt="طريقة دفع">
+                        <img src="images/Mit PayPal Geld senden - so funktioniert's.jpeg" alt="طريقة دفع">
+                        <img src="images/Main sponsor_Western Union.jpeg" alt="طريقة دفع">
+                        <img src="images/1 Bed, 1 Bath & Loft Modern Tiny Home On Wheels - 399 sqft.jpeg" alt="طريقة دفع">
+                        <img src="images/download (12).jpeg" alt="طريقة دفع">
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="my-4 bg-secondary">
+            
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <a href="/Home" class="d-inline-block">
+                        <img src="images/011-3-removebg-.png" alt="أركان لدراسات الجدوى" height="45">
+                    </a>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="d-flex align-items-center justify-content-md-end">
+                        <p class="mb-0 me-3 text-white-50">تـابـعـونـا:</p>
+                        <div>
+                            <a href="https://www.facebook.com/companyarkan" class="social-icon me-2">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="https://twitter.com/arkancompany1?lang=ar" class="social-icon me-2">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                            <a href="#" class="social-icon">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-3">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="mb-0 text-white-50">
+                        <span id="copyright-year"></span> &copy; جميع الحقوق محفوظة لشركة أركان لدراسات الجدوى
+                    </p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">شروط الخدمة</a>
+                    <a href="#" class="text-white-50">سياسة الخصوصية</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback&render=explicit&data-callback=recaptcha_callback" async defer></script>
+    
+    <script>
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+         // Hero Carousel Animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const heroCarousel = document.getElementById('heroCarousel');
+            const carousel = new bootstrap.Carousel(heroCarousel, {
+                interval: 6000, // Change slide every 6 seconds
+                pause: 'hover', // Pause on hover
+                wrap: true // Infinite looping
+            });
+            
+            // Add animation classes when slide changes
+            heroCarousel.addEventListener('slid.bs.carousel', function (e) {
+                const activeItem = e.relatedTarget;
+                const content = activeItem.querySelector('.hero-content');
+                
+                // Reset animations
+                content.querySelector('h1').classList.remove('animate__fadeInDown');
+                content.querySelector('p').classList.remove('animate__fadeInUp');
+                content.querySelector('.hero-buttons').classList.remove('animate__fadeInUp');
+                
+                // Trigger reflow to restart animations
+                void content.offsetWidth;
+                
+                // Add animations back
+                content.querySelector('h1').classList.add('animate__animated', 'animate__fadeInDown');
+                content.querySelector('p').classList.add('animate__animated', 'animate__fadeInUp');
+                content.querySelector('.hero-buttons').classList.add('animate__animated', 'animate__fadeInUp');
+            });
+        });
+
+        // Initialize carousel with autoplay
+        document.addEventListener('DOMContentLoaded', function() {
+            var myCarousel = document.getElementById('testimonialsSlider');
+            var carousel = new bootstrap.Carousel(myCarousel, {
+                interval: 5000, // Change slide every 5 seconds
+                pause: 'hover' // Pause on hover
+            });
+        });
+        
+        // Set current year in copyright
+        document.getElementById('copyright-year').textContent = new Date().getFullYear();
+        
+        // Counter animation
+        function animateCounters() {
+            const counters = document.querySelectorAll('.counter');
+            const speed = 200;
+            
+            counters.forEach(counter => {
+                const target = +counter.getAttribute('data-count');
+                const count = +counter.innerText;
+                const increment = target / speed;
+                
+                if (count < target) {
+                    counter.innerText = Math.ceil(count + increment);
+                    setTimeout(animateCounters, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            });
+        }
+        
+        // Scroll animation for elements
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.animate-on-scroll');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.classList.add('animated');
+                }
+            });
+        }
+        
+        // Run animations when page loads and on scroll
+        window.addEventListener('load', animateOnScroll);
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Start counter animation when scrolled to
+        window.addEventListener('scroll', function() {
+            const counterSection = document.querySelector('.counter-section');
+            const sectionPosition = counterSection.getBoundingClientRect().top;
+            const screenPosition = window.innerHeight / 1.3;
+            
+            if (sectionPosition < screenPosition) {
+                animateCounters();
+                // Remove event listener after first trigger
+                window.removeEventListener('scroll', this);
+            }
+        });
+        
+        // Audio testimonials
+        const audioButtons = document.querySelectorAll('[data-audio]');
+        let currentAudio = null;
+        
+        audioButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const audioSrc = this.getAttribute('data-audio');
+                
+                if (!audioSrc) return;
+                
+                // Pause current audio if playing
+                if (currentAudio) {
+                    currentAudio.pause();
+                    currentAudio.currentTime = 0;
+                    document.querySelectorAll('.fa-pause').forEach(icon => {
+                        icon.classList.remove('fa-pause');
+                        icon.classList.add('fa-play');
+                    });
+                }
+                
+                // If clicking the same button that's currently playing
+                if (this.querySelector('i').classList.contains('fa-pause')) {
+                    this.querySelector('i').classList.remove('fa-pause');
+                    this.querySelector('i').classList.add('fa-play');
+                    currentAudio = null;
+                    return;
+                }
+                
+                // Play new audio
+                currentAudio = new Audio(audioSrc);
+                currentAudio.play();
+                
+                // Change icon to pause
+                this.querySelector('i').classList.remove('fa-play');
+                this.querySelector('i').classList.add('fa-pause');
+                
+                // When audio ends, change icon back to play
+                currentAudio.onended = function() {
+                    button.querySelector('i').classList.remove('fa-pause');
+                    button.querySelector('i').classList.add('fa-play');
+                };
+            });
+        });
+        
+       
+        
+        // Form submission
+        function SavePersonRecord() {
+            var Name = $('#txtname').val();
+            var phone = $('#txtphone').val();
+            var money = $('#txtmoney').val();
+            
+            var Messege = "";
+            
+            if (Messege.length == 0) {
+                $.ajax({
+                    type: "POST",
+                    dataType: "json",
+                    contentType: "application/json; charset=utf-8",
+                    url: "Default.aspx/InsertPersonRecord",
+                    data: "{'Name':'" + Name + "', 'phone':'" + phone + "', 'money':'" + money + "'}",
+                    success: function (Record) {
+                        $('#txtname').val();
+                        $('#txtphone').val();
+                        $('#txtmoney').val();
+                        
+                        if (txtname.value && txtphone.value && txtmoney.value != null) {
+                            $('#txtname').val('');
+                            $('#txtphone').val('');
+                            $('#txtmoney').val('');
+                            alert("تم ارسال طلبكم و سوف يتم التواصل معكم بافضل المشروعات");
+                            location.reload();
+                        } else {
+                            alert("برجاء إدخال البيانات كاملة ");
+                        }
+                    },
+                    Error: function (textMsg) {
+                        $('#Result').text("Error: " + Error);
+                    }
+                });
+            } else {
+                $('#Result').html('');
+                $('#Result').html(Messege);
+            }
+            $('#Result').fadeIn();
+        }
+        
+        // Form validation
+        $('#investmentForm').on('submit', function(e) {
+            e.preventDefault();
+            SavePersonRecord();
+        });
+    </script>
+</body>
+</html>

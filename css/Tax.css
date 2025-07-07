@@ -1,0 +1,178 @@
+    :root {
+            --primary-color: #41AED9;
+            --secondary-color: #000000;
+            --accent-color: #25d366;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --text-color: #495057;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            color: var(--text-color);
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        /* Hero Section */
+        .service-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/21934.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            min-height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+        }
+        
+        .service-hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+        }
+        
+        .service-hero h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+            animation: fadeInDown 1s ease;
+        }
+        
+        /* Service Content Section */
+        .service-content-section {
+            padding: 80px 0;
+        }
+        
+        .service-image-container {
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .service-image-container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+        }
+        
+        .service-image-container:hover .service-image {
+            transform: scale(1.05);
+        }
+        
+        .service-details {
+            padding-right: 30px;
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 30px;
+            color: var(--secondary-color);
+            font-weight: 700;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            right: 0;
+            width: 80px;
+            height: 3px;
+            background: var(--primary-color);
+        }
+        
+        /* Features Section */
+        .features-section {
+            background-color: var(--light-color);
+            padding: 60px 0;
+        }
+        
+        .feature-box {
+            background-color: white;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(65, 174, 217, 0.15);
+        }
+        
+        .feature-box:hover .feature-icon {
+            transform: scale(1.1);
+            color: var(--primary-color);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), #25d366);
+            color: white;
+            padding: 60px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .cta-section h3 {
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .btn-light {
+            background-color: white;
+            color: var(--primary-color);
+            font-weight: 500;
+            border-radius: 50px;
+            padding: 12px 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-light:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(255, 255, 255, 0.2);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 992px) {
+            .service-details {
+                padding-right: 0;
+                margin-top: 40px;
+            }
+            
+            .service-hero h1 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .service-hero {
+                height: 40vh;
+                min-height: 300px;
+            }
+        }
