@@ -17,288 +17,8 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
      <link rel="stylesheet" href="css/main.css"/>
+     <link rel="stylesheet" href="css/EconomicDepartments.css"/>
     
-    <style>
-        :root {
-            --primary-color: #41AED9;
-            --secondary-color: #000000;
-            --accent-color: #25d366;
-            --light-color: #f8f9fa;
-            --dark-color: #343a40;
-            --text-color: #495057;
-        }
-        
-        body {
-            font-family: 'Tajawal', sans-serif;
-            color: var(--text-color);
-            background-color: #ffffff;
-            overflow-x: hidden;
-        }
-        
-        /* Navbar Styles */
-        .navbar {
-            background-color: white !important;
-            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .navbar.scrolled {
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-        }
-        
-        .nav-link {
-            color: var(--dark-color) !important;
-            font-weight: 500;
-            padding: 0.5rem 1rem;
-            transition: all 0.3s;
-            position: relative;
-        }
-        
-        .nav-link:hover,
-        .nav-link:focus,
-        .nav-link.active {
-            color: var(--primary-color) !important;
-        }
-        
-        .dropdown-menu {
-            background-color: white;
-            border: none;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-        
-        .dropdown-item {
-            color: var(--dark-color);
-            transition: all 0.2s;
-            padding: 0.5rem 1.5rem;
-        }
-        
-        .dropdown-item:hover,
-        .dropdown-item:focus {
-            background-color: #f8f9fa;
-            color: var(--primary-color);
-            padding-right: 2rem;
-        }
-        
-        /* Page Header */
-        .page-header {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), url('/images/127372.jpg') center/cover no-repeat;
-            height: 60vh;
-            min-height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-        
-        .page-header h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-        }
-        
-        /* Filter Buttons */
-        .filter-buttons {
-            margin-bottom: 30px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .filter-btn {
-            border: 2px solid var(--primary-color);
-            background: transparent;
-            color: var(--primary-color);
-            padding: 8px 20px;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-        
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: var(--primary-color);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(65, 174, 217, 0.3);
-        }
-        
-        /* Project Cards */
-        .project-card {
-            border: none;
-            border-radius: 15px;
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-            height: 100%;
-            margin-bottom: 30px;
-        }
-        
-        .project-card img {
-            transition: all 0.5s ease;
-            height: 250px;
-            object-fit: cover;
-            width: 100%;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
-        
-        .project-card:hover img {
-            transform: scale(1.05);
-        }
-        
-        .project-card .card-body {
-            padding: 20px;
-        }
-        
-        .project-card .card-title {
-            font-weight: 600;
-            margin-bottom: 15px;
-            color: var(--secondary-color);
-            transition: all 0.3s ease;
-        }
-        
-        .project-card:hover .card-title {
-            color: var(--primary-color);
-        }
-        
-        .project-card .btn {
-            border-radius: 30px;
-            padding: 8px 20px;
-            font-weight: 500;
-        }
-        
-        .project-price {
-            color: var(--primary-color);
-            font-weight: 600;
-            margin: 10px 0;
-            display: flex;
-            align-items: center;
-        }
-        
-        .project-price i {
-            margin-left: 5px;
-        }
-        
-        /* Buttons */
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-        }
-        
-        .btn-primary:hover {
-            background-color: #3a9cc8;
-            border-color: #3a9cc8;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(65, 174, 217, 0.3);
-        }
-        
-        .btn-outline-primary {
-            border-color: var(--primary-color);
-            color: var(--primary-color);
-        }
-        
-        .btn-outline-primary:hover {
-            background-color: var(--primary-color);
-            color: white;
-        }
-        
-        /* Section Title */
-        .section-title {
-            position: relative;
-            margin-bottom: 40px;
-            color: var(--secondary-color);
-            font-weight: 700;
-            text-align: center;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            right: 50%;
-            transform: translateX(50%);
-            width: 80px;
-            height: 3px;
-            background: var(--primary-color);
-        }
-        
-        
-        /* WhatsApp Float Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            background-color: var(--accent-color);
-            color: white;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.3);
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: all 0.4s ease;
-            animation: pulse 2s infinite;
-        }
-        
-        .whatsapp-float:hover {
-            transform: scale(1.1) rotate(10deg);
-            color: white;
-            box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
-            animation: none;
-        }
-        
-        @keyframes pulse {
-            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
-            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 768px) {
-            .page-header {
-                height: 250px;
-            }
-            
-            .page-header h1 {
-                font-size: 2rem;
-            }
-            
-            .filter-buttons {
-                gap: 8px;
-            }
-            
-            .filter-btn {
-                padding: 6px 15px;
-                font-size: 0.9rem;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .page-header {
-                height: 200px;
-            }
-            
-            .page-header h1 {
-                font-size: 1.8rem;
-            }
-            
-            .filter-buttons {
-                gap: 5px;
-            }
-        }
-    </style>
 </head>
 <body>
     <!-- WhatsApp Float Button -->
@@ -335,40 +55,40 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><h6 class="dropdown-header">دراسات الجدوى</h6></li>
-                            <li><a class="dropdown-item" href="/Services/MarketingStudy">دراسة تسويقية</a></li>
-                            <li><a class="dropdown-item" href="/Services/DetailedStudy">دراسة فنية</a></li>
-                            <li><a class="dropdown-item" href="/Services/FinancialStudy">دراسة مالية</a></li>
+                            <li><a class="dropdown-item" href="/Services/MarketingStudy.html">دراسة تسويقية</a></li>
+                            <li><a class="dropdown-item" href="/Services/DetailedStudy.html">دراسة فنية</a></li>
+                            <li><a class="dropdown-item" href="/Services/FinancialStudy.html">دراسة مالية</a></li>
                             
                             <li><hr class="dropdown-divider"></li>
                             <li><h6 class="dropdown-header">تحليل السوق</h6></li>
-                            <li><a class="dropdown-item" href="/Services/Pricing">تحليل سعر المنتج</a></li>
-                            <li><a class="dropdown-item" href="/Services/Stability">تحليل الاستقرار السعري</a></li>
-                            <li><a class="dropdown-item" href="/Services/Competitors">دراسة منافسين</a></li>
+                            <li><a class="dropdown-item" href="/Services/Pricing.html">تحليل سعر المنتج</a></li>
+                            <li><a class="dropdown-item" href="/Services/Stability.html">تحليل الاستقرار السعري</a></li>
+                            <li><a class="dropdown-item" href="/Services/Competitors.html">دراسة منافسين</a></li>
                             
                             <li><hr class="dropdown-divider"></li>
                             <li><h6 class="dropdown-header">خطوط انتاج</h6></li>
-                            <li><a class="dropdown-item" href="/Services/European">أوروبية</a></li>
-                            <li><a class="dropdown-item" href="/Services/Chinese">صينية</a></li>
+                            <li><a class="dropdown-item" href="/Services/European.html">أوروبية</a></li>
+                            <li><a class="dropdown-item" href="/Services/Chinese.html">صينية</a></li>
                             
                             <li><hr class="dropdown-divider"></li>
                             <li><h6 class="dropdown-header">خدمات متنوعة</h6></li>
-                            <li><a class="dropdown-item" href="/Services/AccountingBalance">مراجعة ميزانيات</a></li>
-                            <li><a class="dropdown-item" href="/Services/EstimatedBudgets">إعداد موازنات تقديريه</a></li>
-                            <li><a class="dropdown-item" href="/Services/FinancialStatements">إعداد قوائم مالية</a></li>
-                            <li><a class="dropdown-item" href="/Services/Tax">حساب الضريبة والزكاة</a></li>
-                            <li><a class="dropdown-item" href="/Services/Strategy">خطط استراتيجية</a></li>
-                            <li><a class="dropdown-item" href="/Services/Export">خطة تصديرية</a></li>
-                            <li><a class="dropdown-item" href="/Services/Marketing">خطة تسويق</a></li>
-                            <li><a class="dropdown-item" href="/Services/Financing">حلول تمويل</a></li>
+                            <li><a class="dropdown-item" href="/Services/AccountingBalance.html">مراجعة ميزانيات</a></li>
+                            <li><a class="dropdown-item" href="/Services/EstimatedBudgets.html">إعداد موازنات تقديريه</a></li>
+                            <li><a class="dropdown-item" href="/Services/FinancialStatements.html">إعداد قوائم مالية</a></li>
+                            <li><a class="dropdown-item" href="/Services/Tax.html">حساب الضريبة والزكاة</a></li>
+                            <li><a class="dropdown-item" href="/Services/Strategy.html">خطط استراتيجية</a></li>
+                            <li><a class="dropdown-item" href="/Services/Export.html ">خطة تصديرية</a></li>
+                            <li><a class="dropdown-item" href="/Services/Marketing.html">خطة تسويق</a></li>
+                            <li><a class="dropdown-item" href="/Services/Financing.html">حلول تمويل</a></li>
                         </ul>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="Invest.html">الفرص الاستثمارية</a>
+                        <a class="nav-link " href="Invest.html">الفرص الاستثمارية</a>
                     </li>
                     
                     <li class="nav-item active">
-                        <a class="nav-link" href="EconomicDepartments.html">الاقسام الاقتصادية</a>
+                        <a class="nav-link active" href="EconomicDepartments.html">الاقسام الاقتصادية</a>
                     </li>
                     
                     <li class="nav-item dropdown">
@@ -376,9 +96,9 @@
                             عالم التجارة والصناعة
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/sections/SupportedProjects">مشروعات تدعمها الدولة</a></li>
-                            <li><a class="dropdown-item" href="/sections/MainProjects">اهم المشروعات</a></li>
-                            <li><a class="dropdown-item" href="/blogs">مقالات</a></li>
+                            <li><a class="dropdown-item" href="commerce/SupportedProjects.html">مشروعات تدعمها الدولة</a></li>
+                            <li><a class="dropdown-item" href="commerce/MainProjects.html">اهم المشروعات</a></li>
+                            <li><a class="dropdown-item" href="commerce/blogs.html">مقالات</a></li>
                         </ul>
                     </li>
                     
@@ -582,9 +302,26 @@
         </div>
     </section>
 
+<!-- CTA Section -->
+<section class="cta-section" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/map-lying-wooden-table.jpg'); background-size: cover; background-position: center; padding: 80px 0; position: relative; z-index: 1;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 text-white"> <!-- Removed animate-on-scroll class for testing -->
+                <h2 class="mb-3" style="color: white !important;">هل أنت مستعد لبدء مشروعك الاستثماري؟</h2>
+                <p class="mb-0" style="color: white !important;">تواصل معنا اليوم واحصل على استشارة مجانية من خبرائنا</p>
+            </div>
+            <div class="col-lg-4 text-lg-end"> <!-- Removed animate-on-scroll class for testing -->
+                <a href="contact.html" class="btn btn-light px-4">
+                    <i class="fas fa-paper-plane me-2"></i> تواصل معنا
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Footer -->
        <!-- Footer -->
-    <footer class="py-5 bg-dark text-white">
+   <footer class="py-5 bg-dark text-white">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
@@ -592,9 +329,9 @@
                     <div class="row">
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
-                                <li class="mb-2"><a href="/Home">الرئيسية</a></li>
-                                <li class="mb-2"><a href="/About">من نحن</a></li>
-                                <li class="mb-2"><a href="/sections/MainProjects">اهم المشروعات</a></li>
+                                <li class="mb-2"><a href="index.html">الرئيسية</a></li>
+                                <li class="mb-2"><a href="about.html">من نحن</a></li>
+                                <li class="mb-2"><a href="commerce/MainProjects.html">اهم المشروعات</a></li>
                                 <li class="mb-2"><a href="Invest.html">الفرص الاستثمارية</a></li>
                             </ul>
                         </div>
@@ -602,7 +339,7 @@
                             <ul class="list-unstyled footer-links">
                                 <li class="mb-2"><a href="EconomicDepartments.html">الاقسام الاقتصادية</a></li>
                                 <li class="mb-2"><a href="contact.html">تواصل معنا</a></li>
-                                <li class="mb-2"><a href="/blogs">المدونة</a></li>
+                                <li class="mb-2"><a href="commerce/blogs.html">المدونة</a></li>
                                 <li class="mb-2"><a href="ProfitWithUs.html">شاركنا الأرباح</a></li>
                             </ul>
                         </div>

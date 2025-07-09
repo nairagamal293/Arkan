@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أهم المشروعات - أركان</title>
+    <title>مشروع سلسلة مطاعم كبرى داخل المملكة باستثمار 900 ألف دولار | أركان</title>
     
     <!-- Bootstrap 5 RTL -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
@@ -13,16 +13,13 @@
     
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+     <link rel="stylesheet" href="../css/main.css"/> 
     
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-           <link rel="stylesheet" href="../css/main.css"/> 
-
     <style>
         :root {
             --primary-color: #41AED9;
-            --secondary-color: #000000;
+            --secondary-color: #41AED9;
             --accent-color: #25d366;
             --light-color: #f8f9fa;
             --dark-color: #343a40;
@@ -36,184 +33,203 @@
             overflow-x: hidden;
         }
         
-        /* Hero Section */
-        .projects-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/2148252130.jpg');
-            background-size: cover;
-            background-position: center;
-            height: 60vh;
-            min-height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
+                
+        /* Project Content Section */
+        .project-content-section {
+            padding: 60px 0;
         }
         
-        .projects-hero-content {
-            max-width: 800px;
-            padding: 0 20px;
+        .project-container {
+            max-width: 900px;
+            margin: 0 auto;
         }
         
-        .projects-hero h1 {
-            font-size: 3.5rem;
+        .project-header {
+            margin-bottom: 40px;
+        }
+        
+        .project-title {
+            font-size: 2rem;
             font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+            border-right: 4px solid var(--primary-color);
+            padding-right: 15px;
+        }
+        
+        .project-meta {
+            color: #6c757d;
             margin-bottom: 20px;
-            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-            animation: fadeInDown 1s ease;
+            font-size: 0.9rem;
         }
         
-        .projects-hero p {
-            font-size: 1.25rem;
+        .project-date {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .project-featured-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
             margin-bottom: 30px;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-            animation: fadeInUp 1s ease 0.3s both;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
-        /* Projects Section */
-        .projects-section {
-            padding: 80px 0;
-            background-color: #ffffff;
+        .project-body {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .project-body p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .project-highlights {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .highlight-item {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .highlight-icon {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            margin-left: 10px;
+            margin-top: 3px;
+        }
+        
+        /* Project Details */
+        .project-details {
+            margin: 40px 0;
+        }
+        
+        .detail-card {
+            border-radius: 10px;
+            border: 1px solid #e9ecef;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .detail-card:hover {
+            box-shadow: 0 5px 15px rgba(65, 174, 217, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .detail-title {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        
+        /* Related Projects */
+        .related-projects {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+            margin-top: 60px;
         }
         
         .section-title {
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             color: var(--secondary-color);
             font-weight: 700;
+            text-align: center;
         }
         
         .section-title:after {
             content: '';
             position: absolute;
             bottom: -15px;
-            right: 0;
+            right: 50%;
+            transform: translateX(50%);
             width: 80px;
             height: 3px;
             background: var(--primary-color);
-            animation: lineGrow 1s ease-out;
         }
         
-        @keyframes lineGrow {
-            from { width: 0; }
-            to { width: 80px; }
-        }
-        
-        /* Project Cards */
-        .project-card {
-            border-radius: 15px;
+        .related-project-card {
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             margin-bottom: 30px;
             background: white;
-            border: none;
             height: 100%;
         }
         
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(65, 174, 217, 0.2);
+        .related-project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(65, 174, 217, 0.15);
         }
         
-        .project-img {
-            height: 250px;
+        .related-project-img {
+            height: 200px;
             object-fit: cover;
             width: 100%;
-            transition: transform 0.5s ease;
         }
         
-        .project-card:hover .project-img {
-            transform: scale(1.05);
+        .related-project-body {
+            padding: 20px;
         }
         
-        .project-body {
-            padding: 25px;
-            position: relative;
+        .related-project-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+            font-size: 1.1rem;
         }
         
-        .project-title {
+        .related-project-meta {
+            color: #6c757d;
+            font-size: 0.85rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/map-lying-wooden-table.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 80px 0;
+            color: white;
+            text-align: right;
+        }
+        
+        .cta-section h2 {
+            font-size: 2rem;
             font-weight: 700;
             margin-bottom: 15px;
-            color: var(--secondary-color);
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
         }
         
-        .project-text {
-            margin-bottom: 20px;
-            color: var(--text-color);
+        .cta-section p {
+            font-size: 1.25rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
         
-        .project-badge {
-            position: absolute;
-            top: -15px;
-            left: 20px;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 500;
-        }
-        
-         .cta-section {
-        position: relative;
-        color: white;
-        text-align: right;
-    }
-    
-    .cta-section h2 {
-        font-size: 2rem;
-        font-weight: 700;
-        margin-bottom: 15px;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    }
-    
-    .cta-section p {
-        font-size: 1.25rem;
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-    }
-    
-    .btn-light {
-        background-color: white;
-        color: var(--primary-color);
-        border: none;
-        font-weight: 600;
-    }
-    
-    .btn-light:hover {
-        background-color: rgba(255, 255, 255, 0.9);
-        color: var(--primary-color);
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    }
-
-        /* Filter Buttons */
-        .filter-buttons {
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .filter-btn {
-            border: 2px solid var(--primary-color);
-            background: transparent;
+        .btn-light {
+            background-color: white;
             color: var(--primary-color);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            cursor: pointer;
+            border: none;
+            font-weight: 600;
         }
         
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--primary-color);
-            color: white;
+        .btn-light:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
-        
-        /* Buttons */
+         /* Buttons */
         .btn {
             font-weight: 500;
             padding: 0.6rem 1.5rem;
@@ -251,69 +267,51 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(65, 174, 217, 0.3);
         }
-        
-        /* Animation Classes */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-        
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .delay-1 {
-            transition-delay: 0.2s;
-        }
-        
-        .delay-2 {
-            transition-delay: 0.4s;
-        }
-        
-        .delay-3 {
-            transition-delay: 0.6s;
-        }
-        
         /* Responsive Adjustments */
         @media (max-width: 992px) {
-            .projects-hero h1 {
-                font-size: 2.5rem;
+            .project-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .project-title {
+                font-size: 1.8rem;
             }
         }
         
         @media (max-width: 768px) {
-            .projects-hero {
-                height: 50vh;
-                min-height: 400px;
+            .project-hero {
+                height: 40vh;
+                min-height: 300px;
             }
             
-            .projects-hero h1 {
-                font-size: 2rem;
+            .project-hero h1 {
+                font-size: 1.8rem;
             }
             
-            .projects-hero p {
-                font-size: 1rem;
+            .project-featured-image {
+                height: 350px;
             }
         }
         
         @media (max-width: 576px) {
-            .projects-hero {
-                height: 40vh;
-                min-height: 300px;
+            .project-hero {
+                height: 35vh;
+                min-height: 250px;
+            }
+            
+            .project-featured-image {
+                height: 250px;
+            }
+            
+            .project-title {
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/+966564879767" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Navigation Bar (Same as about page) -->
-    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <!-- Navigation Bar -->
+ <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <!-- Logo on the left -->
             <a class="navbar-brand order-lg-1 me-lg-5" href="/Home">
@@ -407,73 +405,142 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="projects-hero">
-        <div class="projects-hero-content">
-            <h1 class="animate__animated animate__fadeInDown">أهم المشروعات</h1>
-            <p class="animate__animated animate__fadeInUp">اكتشف فرص استثمارية مميزة مع دراسات جدوى دقيقة واحترافية</p>
-            <div class="animate__animated animate__fadeInUp">
-                <a href="#projects" class="btn btn-primary me-2">تصفح المشروعات</a>
-                <a href="../contact.html" class="btn btn-outline-light">تواصل معنا</a>
+
+
+    <!-- Project Content Section -->
+    <section class="project-content-section">
+        <div class="container project-container">
+            <div class="project-header">
+                <h1 class="project-title">مشروع سلسلة مطاعم كبرى داخل المملكة باستثمار 900 ألف دولار</h1>
+                <div class="project-meta">
+                    <span class="project-date"><i class="far fa-calendar-alt me-2"></i>4 أكتوبر 2019</span>
+                    <span class="mx-2">|</span>
+                    <span><i class="far fa-folder me-2"></i>مشروعات كبيرة</span>
+                </div>
+            </div>
+            
+            <img src="../images/3392.jpg" alt="مشروع سلسلة مطاعم" class="project-featured-image">
+            
+            <div class="project-body">
+                <div class="project-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle highlight-icon"></i>
+                        <div>
+                            <h3>الاستثمار المبدئي</h3>
+                            <p>900,000 دولار أمريكي</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-lightbulb highlight-icon"></i>
+                        <div>
+                            <h3>نوع المشروع</h3>
+                            <p>سلسلة مطاعم بعلامة تجارية مميزة</p>
+                        </div>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-map-marker-alt highlight-icon"></i>
+                        <div>
+                            <h3>الموقع</h3>
+                            <p>المملكة العربية السعودية</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <p>نقدم في هذا المشروع دراسة جدوى لسلسة مطاعم كبرى تسوق نفسها بعلامة تجارية معينة ونعتمد فيها على فكرة خلق عادات استهلاكية معينة والمزيد من الطلب حول المأكولات الخاصة بالمطعم وأفكار أخرى مبتكرة وحصرية جدا داخل الدراسة بشكل متفرد جدا على مستوى العالم.</p>
+                
+                <div class="project-details">
+                    <h2>تفاصيل المشروع</h2>
+                    
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="detail-card">
+                                <h3 class="detail-title"><i class="fas fa-chart-line me-2"></i>الفرصة الاستثمارية</h3>
+                                <p>تتمثل في إنشاء سلسلة مطاعم تقدم تجربة طعام فريدة بعلامة تجارية مميزة، مع التركيز على خلق عادات استهلاكية جديدة في السوق السعودي.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="detail-card">
+                                <h3 class="detail-title"><i class="fas fa-lightbulb me-2"></i>نقاط التميز</h3>
+                                <p>أفكار مبتكرة وحصرية، علامة تجارية قوية، استراتيجية تسويقية فريدة، ووصفات طعام مميزة غير متوفرة في السوق المحلي.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="detail-card">
+                                <h3 class="detail-title"><i class="fas fa-calculator me-2"></i>المؤشرات المالية</h3>
+                                <p>تحليل دقيق للتكاليف الاستثمارية، هيكل التمويل، التدفقات النقدية المتوقعة، ومعدلات العائد على الاستثمار.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="detail-card">
+                                <h3 class="detail-title"><i class="fas fa-chart-pie me-2"></i>دراسة السوق</h3>
+                                <p>تحليل شامل للسوق المستهدف، المنافسين، اتجاهات المستهلكين، وحجم الطلب المتوقع على الخدمات المقدمة.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <h2>مميزات الدراسة</h2>
+                <ul>
+                    <li>تحليل متكامل لجميع جوانب المشروع</li>
+                    <li>دراسة جدوى مالية دقيقة مع سيناريوهات متعددة</li>
+                    <li>استراتيجية تسويقية مبتكرة</li>
+                    <li>خطط تشغيلية وتنظيمية مفصلة</li>
+                    <li>تحليل للمخاطر وخطط للتخفيف منها</li>
+                </ul>
+                
+                <div class="text-center mt-5">
+                    <a href="../contact.html" class="btn btn-primary btn-lg">
+                        <i class="fas fa-envelope me-2"></i> اطلب الدراسة الكاملة
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    
+    <!-- Related Projects Section -->
+    <section class="related-projects">
         <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center animate-on-scroll">
-                    <h2 class="section-title">مشروعات مميزة</h2>
-                    <p class="text-muted">اختر من بين مجموعة واسعة من المشروعات المدروسة بعناية</p>
-                </div>
-            </div>
+            <h2 class="section-title">مشاريع ذات صلة</h2>
             
-            <!-- Filter Buttons -->
-            <div class="filter-buttons animate-on-scroll delay-1">
-                <button class="filter-btn active" data-filter="all">الكل</button>
-                <button class="filter-btn" data-filter="large">مشروعات كبيرة</button>
-                <button class="filter-btn" data-filter="medium">مشروعات متوسطة</button>
-                <button class="filter-btn" data-filter="small">مشروعات صغيرة</button>
-            </div>
-            
-            <!-- Projects Grid -->
-            <div class="row g-4">
-                <!-- Project 1 - Large -->
-                <div class="col-md-6 col-lg-4 animate-on-scroll" data-category="large">
-                    <div class="project-card">
-                        <img src="../images/مزرعة.jpg" alt="مشروع مزرعة غابات" class="project-img">
-                        <div class="project-body">
-                            <span class="project-badge">كبيرة</span>
-                            <h3 class="project-title">مشروع مزرعة غابات أشجار الخشب والورق</h3>
-                            <p class="project-text">مشروع ضخم لإنشاء مزرعة غابات لأشجار الخشب والورق بالمملكة العربية السعودية باستثمار 600 مليون دولار</p>
-                            <a href="/content/The project of forest plantation of wood and paper trees in the Kingdom with an investment of $ 600 million" class="btn btn-primary w-100">عرض التفاصيل</a>
+            <div class="row">
+                <!-- Related Project 1 -->
+                <div class="col-md-4">
+                    <div class="related-project-card">
+                        <img src="../images/محمصة.jpg" alt="مشروع ذات صلة" class="related-project-img">
+                        <div class="related-project-body">
+                            <h3 class="related-project-title">مشروع محمصة بن باستثمار 400 ألف دولار</h3>
+                            <p class="related-project-meta">
+                                <span class="project-date"><i class="far fa-calendar-alt me-2"></i>4 أكتوبر 2019</span>
+                            </p>
+                            <a href="/content/The project of Banjazah investment of 400 thousand dollars" class="btn btn-outline-primary btn-sm">عرض التفاصيل</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 2 - Medium -->
-                <div class="col-md-6 col-lg-4 animate-on-scroll delay-1" data-category="medium">
-                    <div class="project-card">
-                        <img src="../images/مطعم.jpg" alt="سلسلة مطاعم" class="project-img">
-                        <div class="project-body">
-                            <span class="project-badge">متوسطة</span>
-                            <h3 class="project-title">سلسلة مطاعم كبرى داخل المملكة</h3>
-                            <p class="project-text">مشروع إنشاء سلسلة مطاعم متكاملة الخدمات في مختلف مدن المملكة باستثمار 900 ألف دولار</p>
-                            <a href="/content/A major restaurant chain in the Kingdom with an investment of 900 thousand dollars" class="btn btn-primary w-100">عرض التفاصيل</a>
+                <!-- Related Project 2 -->
+                <div class="col-md-4">
+                    <div class="related-project-card">
+                        <img src="../images/مشروع.jpg" alt="مشروع ذات صلة" class="related-project-img">
+                        <div class="related-project-body">
+                            <h3 class="related-project-title">مشروع تصنيع مواد بناء باستثمار 1.2 مليون دولار</h3>
+                            <p class="related-project-meta">
+                                <span class="project-date"><i class="far fa-calendar-alt me-2"></i>15 مارس 2020</span>
+                            </p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">عرض التفاصيل</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 3 - Medium -->
-                <div class="col-md-6 col-lg-4 animate-on-scroll delay-2" data-category="medium">
-                    <div class="project-card">
-                        <img src="../images/محمصة.jpg" alt="محمصة بن" class="project-img">
-                        <div class="project-body">
-                            <span class="project-badge">متوسطة</span>
-                            <h3 class="project-title">مشروع محمصة بن متكاملة</h3>
-                            <p class="project-text">مشروع متكامل لمحمصة بن عالية الجودة مع خط إنتاج وتوزيع باستثمار 400 ألف دولار</p>
-                            <a href="/content/The project of Banjazah investment of 400 thousand dollars" class="btn btn-primary w-100">عرض التفاصيل</a>
+                <!-- Related Project 3 -->
+                <div class="col-md-4">
+                    <div class="related-project-card">
+                        <img src="../images/اركان.jpg" alt="مشروع ذات صلة" class="related-project-img">
+                        <div class="related-project-body">
+                            <h3 class="related-project-title">مشروع مركز لوجستي باستثمار 2 مليون دولار</h3>
+                            <p class="related-project-meta">
+                                <span class="project-date"><i class="far fa-calendar-alt me-2"></i>22 مايو 2020</span>
+                            </p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">عرض التفاصيل</a>
                         </div>
                     </div>
                 </div>
@@ -482,24 +549,23 @@
     </section>
 
     <!-- CTA Section -->
-   <section class="cta-section" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/map-lying-wooden-table.jpg'); background-size: cover; background-position: center; padding: 80px 0;">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-lg-8 text-white animate-on-scroll">
-                <h2 class="mb-3">ما لديك مشروع خاص تريد دراسته؟</h2>
-                <p class="mb-0">تواصل معنا اليوم واحصل على دراسات جدوى مخصصة للمشروعات</p>
-            </div>
-            <div class="col-lg-4 text-lg-end animate-on-scroll delay-1">
-                <a href="contact.html" class="btn btn-light px-4">
-                    <i class="fas fa-paper-plane me-2"></i> تواصل معنا
-                </a>
+    <section class="cta-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 text-white">
+                    <h2 class="mb-3">هل ترغب في دراسة جدوى لمشروعك؟</h2>
+                    <p class="mb-0">تواصل معنا اليوم واحصل على استشارة مجانية من خبرائنا</p>
+                </div>
+                <div class="col-lg-4 text-lg-end">
+                    <a href="../contact.html" class="btn btn-light px-4">
+                        <i class="fas fa-paper-plane me-2"></i> تواصل معنا
+                    </a>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-    <!-- Footer (Same as about page) -->
-  <footer class="py-5 bg-dark text-white">
+     <footer class="py-5 bg-dark text-white">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
@@ -631,48 +697,6 @@
                 navbar.classList.remove('scrolled');
             }
         });
-
-        // Filter projects
-        document.querySelectorAll('.filter-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                const filter = button.getAttribute('data-filter');
-                const projects = document.querySelectorAll('.col-md-6.col-lg-4');
-                
-                projects.forEach(project => {
-                    if (filter === 'all' || project.getAttribute('data-category') === filter) {
-                        project.style.display = 'block';
-                    } else {
-                        project.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // Scroll animation for elements
-        function animateOnScroll() {
-            const elements = document.querySelectorAll('.animate-on-scroll');
-            
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.2;
-                
-                if (elementPosition < screenPosition) {
-                    element.classList.add('animated');
-                }
-            });
-        }
-        
-        // Run animations when page loads and on scroll
-        window.addEventListener('load', animateOnScroll);
-        window.addEventListener('scroll', animateOnScroll);
         
         // Set current year in copyright
         document.getElementById('copyright-year').textContent = new Date().getFullYear();

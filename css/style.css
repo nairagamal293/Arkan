@@ -1,11 +1,10 @@
 
         
-        
         /* Hero Carousel */
         .hero-carousel {
             position: relative;
             height: 60vh;
-            min-height: 600px;
+            min-height: 450px;
             overflow: hidden;
         }
         
@@ -114,15 +113,15 @@
         
         /* Slide-specific backgrounds */
         .slide-1 {
-            background-image: url('images/Quel\ est\ le\ budget\ des\ courses\ pour\ deux\ personnes\ en\ 2024\ _.png');
+            background-image: url('/images/Quel\ est\ le\ budget\ des\ courses\ pour\ deux\ personnes\ en\ 2024\ _.png');
         }
         
         .slide-2 {
-            background-image: url('images/download\ \(16\).jpeg');
+            background-image: url('/images/download\ \(16\).jpeg');
         }
         
         .slide-3 {
-            background-image: url('images/download\ \(17\).jpeg');
+            background-image: url('/images/download\ \(17\).jpeg');
         }
         
         /* Responsive Adjustments */
@@ -204,7 +203,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, var(--primary-color) 0%, rgba(65, 174, 217, 0.1) 100%);
+            
             opacity: 0;
             transition: all 0.3s ease;
             z-index: -1;
@@ -220,7 +219,7 @@
         }
         
         .service-card:hover .service-icon {
-            color: white;
+            color: rgb(0, 0, 0);
             transform: scale(1.1);
         }
         
@@ -233,23 +232,28 @@
         
         /* Counter Section */
         .counter-section {
-            background-color: var(--secondary-color);
-            color: white;
-            padding: 80px 0;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .counter-section:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(65, 174, 217, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%);
-            z-index: 0;
-        }
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+    background-image: url('path-to-your-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* optional - creates parallax effect */
+}
+
+.counter-section:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(5, 50, 68, 0.7) 0%, rgba(0, 0, 0, 0.9) 100%);
+    z-index: 0;
+}
         
         .counter-card {
             background-color: rgba(255, 255, 255, 0.05);
@@ -445,27 +449,14 @@
             bottom: 0;
             right: 0;
             width: 100%;
-            height: 0;
-            background: linear-gradient(to top, var(--primary-color), rgba(65, 174, 217, 0.7));
+            height: 0;       
             z-index: -1;
             transition: all 0.4s ease;
         }
         
-        .feature-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-            color: white;
-        }
         
-        .feature-box:hover:before {
-            height: 100%;
-        }
         
-        .feature-box:hover .feature-icon,
-        .feature-box:hover h4,
-        .feature-box:hover p {
-            color: white;
-        }
+        
         
         .feature-icon {
             font-size: 2.8rem;
@@ -492,10 +483,7 @@
             transition: all 0.5s ease;
         }
         
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
-        }
+      
         
         .project-card:hover img {
             transform: scale(1.05);
@@ -513,7 +501,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+           
             opacity: 0;
             transition: all 0.3s ease;
         }
@@ -527,7 +515,7 @@
         }
         
         .project-card:hover .card-title {
-            color: white;
+            color: rgb(9, 8, 8);
         }
         
         /* Buttons */
@@ -593,7 +581,88 @@
             box-shadow: 0 10px 20px rgba(65, 174, 217, 0.3);
         }
         
-       
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(65, 174, 217, 0.1) 0%, rgba(0, 0, 0, 0.9) 100%);
+            z-index: 0;
+        }
+        
+        .footer-links a {
+            color: #adb5bd;
+            text-decoration: none;
+            transition: all 0.3s;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .footer-links a:after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            right: 0;
+            width: 0;
+            height: 1px;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary-color);
+            transform: translateX(-5px);
+        }
+        
+        .footer-links a:hover:after {
+            width: 100%;
+            right: auto;
+            left: 0;
+        }
+        
+        .social-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 10px;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            color: white;
+        }
+        
+        .social-icon:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(65, 174, 217, 0.3);
+        }
+        
+        .payment-methods img {
+            height: 30px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            transition: all 0.3s ease;
+            filter: grayscale(100%);
+            opacity: 0.7;
+        }
+        
+        .payment-methods img:hover {
+            filter: grayscale(0%);
+            opacity: 1;
+            transform: translateY(-3px);
+        }
         
         /* Contact Form */
         .contact-form {
@@ -680,4 +749,66 @@
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
             100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 100px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .whatsapp-float {
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+                bottom: 20px;
+                left: 20px;
+            }
+            
+            .feature-box,
+            .service-card,
+            .counter-card {
+                margin-bottom: 20px;
+            }
+            
+            .testimonial-box {
+                margin: 0 5px;
+            }
+            
+            .client-img-container {
+                width: 60px;
+                height: 60px;
+            }
+        }
+        
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .delay-1 {
+            transition-delay: 0.2s;
+        }
+        
+        .delay-2 {
+            transition-delay: 0.4s;
+        }
+        
+        .delay-3 {
+            transition-delay: 0.6s;
         }

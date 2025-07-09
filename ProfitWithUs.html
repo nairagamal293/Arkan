@@ -17,274 +17,11 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="css/ProfitWithUs.css"/>
     
     
     <style>
-        :root {
-            --primary-color: #2c3e50;
-            --secondary-color: #41AED9;
-            --accent-color: #e74c3c;
-            --light-color: #f8f9fa;
-            --dark-color: #343a40;
-            --text-color: #495057;
-            --border-radius: 8px;
-            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            --transition: all 0.3s ease-in-out;
-        }
-        
-        body {
-            font-family: 'Tajawal', sans-serif;
-            color: var(--text-color);
-            background-color: #f9f9f9;
-            line-height: 1.6;
-        }
-        
-        /* Hero Section */
-        .profit-hero {
-            background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), 
-                        url('images/business-concept-with-graphic-holography.jpg') center/cover no-repeat;
-            height: 60vh;
-            min-height: 450px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-            position: relative;
-        }
-        
-        .profit-hero h1 {
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            animation: fadeInDown 1s ease;
-        }
-        
-        .profit-hero p {
-            font-size: 1.3rem;
-            margin-bottom: 30px;
-            max-width: 700px;
-            margin-right: auto;
-            margin-left: auto;
-            animation: fadeInUp 1s ease 0.3s both;
-        }
-        
-        /* About Section */
-        .about-profit {
-            padding: 80px 0;
-            background-color: white;
-        }
-        
-        .profit-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 40px;
-            height: 100%;
-            transition: var(--transition);
-        }
-        
-        .profit-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .profit-card h3 {
-            color: var(--primary-color);
-            margin-bottom: 20px;
-            position: relative;
-        }
-        
-        .profit-card h3:after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            right: 0;
-            width: 60px;
-            height: 3px;
-            background: var(--secondary-color);
-        }
-        
-        /* Form Section */
-        .profit-form-section {
-            padding: 80px 0;
-            background-color: #f8f9fa;
-        }
-        
-        .form-card {
-            background-color: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            overflow: hidden;
-            transition: var(--transition);
-        }
-        
-        .form-card:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 100%;
-            height: 5px;
-            background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
-        }
-        
-        .form-container {
-            padding: 40px;
-        }
-        
-        /* Form Elements */
-        .form-floating {
-            position: relative;
-            margin-bottom: 20px;
-        }
-        
-        .form-control {
-            border-radius: var(--border-radius);
-            padding: 12px 15px;
-            border: 1px solid #e0e0e0;
-            transition: var(--transition);
-        }
-        
-        .form-control:focus {
-            border-color: var(--secondary-color);
-            box-shadow: 0 0 0 0.25rem rgba(65, 174, 217, 0.25);
-        }
-        
-        .form-label {
-            position: absolute;
-            right: 15px;
-            top: 12px;
-            color: #6c757d;
-            transition: var(--transition);
-            pointer-events: none;
-            background-color: white;
-            padding: 0 5px;
-            border-radius: 4px;
-        }
-        
-        .form-control:focus ~ .form-label,
-        .form-control:not(:placeholder-shown) ~ .form-label {
-            top: -10px;
-            right: 10px;
-            font-size: 12px;
-            color: var(--secondary-color);
-        }
-        
-        /* Buttons */
-        .btn {
-            font-weight: 600;
-            padding: 12px 30px;
-            border-radius: 50px;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            border: none;
-        }
-        
-        .btn-primary {
-            background-color: var(--secondary-color);
-        }
-        
-        .btn-primary:hover {
-            background-color: #16a085;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(26, 188, 156, 0.3);
-        }
-        
-        .btn-outline-primary {
-            border: 2px solid var(--secondary-color);
-            color: var(--secondary-color);
-            background-color: transparent;
-        }
-        
-        .btn-outline-primary:hover {
-            background-color: var(--secondary-color);
-            color: white;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(26, 188, 156, 0.3);
-        }
-        
-        /* WhatsApp Float Button */
-        .whatsapp-float {
-            position: fixed;
-            bottom: 30px;
-            left: 30px;
-            width: 60px;
-            height: 60px;
-            background-color: #25d366;
-            color: white;
-            border-radius: 50%;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
-            z-index: 100;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: var(--transition);
-        }
-        
-        .whatsapp-float:hover {
-            background-color: #128c7e;
-            color: white;
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
-        }
-        
-        /* Responsive Adjustments */
-        @media (max-width: 992px) {
-            .profit-hero {
-                height: 50vh;
-                min-height: 350px;
-            }
-            
-            .profit-hero h1 {
-                font-size: 2.8rem;
-            }
-            
-            .profit-hero p {
-                font-size: 1.1rem;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .profit-hero {
-                height: 45vh;
-                min-height: 300px;
-            }
-            
-            .profit-hero h1 {
-                font-size: 2.3rem;
-            }
-            
-            .form-container {
-                padding: 30px;
-            }
-        }
-        
-        @media (max-width: 576px) {
-            .profit-hero {
-                height: 40vh;
-                min-height: 250px;
-            }
-            
-            .profit-hero h1 {
-                font-size: 2rem;
-            }
-            
-            .profit-hero p {
-                font-size: 1rem;
-            }
-            
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                font-size: 25px;
-                bottom: 20px;
-                left: 20px;
-            }
-        }
+      
     </style>
 </head>
 <body>
@@ -322,31 +59,31 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><h6 class="dropdown-header">دراسات الجدوى</h6></li>
-                            <li><a class="dropdown-item" href="/Services/MarketingStudy">دراسة تسويقية</a></li>
-                            <li><a class="dropdown-item" href="/Services/DetailedStudy">دراسة فنية</a></li>
-                            <li><a class="dropdown-item" href="/Services/FinancialStudy">دراسة مالية</a></li>
+                            <li><a class="dropdown-item" href="/Services/MarketingStudy.html">دراسة تسويقية</a></li>
+                            <li><a class="dropdown-item" href="/Services/DetailedStudy.html">دراسة فنية</a></li>
+                            <li><a class="dropdown-item" href="/Services/FinancialStudy.html">دراسة مالية</a></li>
                             
                             <li><hr class="dropdown-divider"></li>
                             <li><h6 class="dropdown-header">تحليل السوق</h6></li>
-                            <li><a class="dropdown-item" href="/Services/Pricing">تحليل سعر المنتج</a></li>
-                            <li><a class="dropdown-item" href="/Services/Stability">تحليل الاستقرار السعري</a></li>
-                            <li><a class="dropdown-item" href="/Services/Competitors">دراسة منافسين</a></li>
+                            <li><a class="dropdown-item" href="/Services/Pricing.html">تحليل سعر المنتج</a></li>
+                            <li><a class="dropdown-item" href="/Services/Stability.html">تحليل الاستقرار السعري</a></li>
+                            <li><a class="dropdown-item" href="/Services/Competitors.html">دراسة منافسين</a></li>
                             
                             <li><hr class="dropdown-divider"></li>
                             <li><h6 class="dropdown-header">خطوط انتاج</h6></li>
-                            <li><a class="dropdown-item" href="/Services/European">أوروبية</a></li>
-                            <li><a class="dropdown-item" href="/Services/Chinese">صينية</a></li>
+                            <li><a class="dropdown-item" href="/Services/European.html">أوروبية</a></li>
+                            <li><a class="dropdown-item" href="/Services/Chinese.html">صينية</a></li>
                             
                             <li><hr class="dropdown-divider"></li>
                             <li><h6 class="dropdown-header">خدمات متنوعة</h6></li>
-                            <li><a class="dropdown-item" href="/Services/AccountingBalance">مراجعة ميزانيات</a></li>
-                            <li><a class="dropdown-item" href="/Services/EstimatedBudgets">إعداد موازنات تقديريه</a></li>
-                            <li><a class="dropdown-item" href="/Services/FinancialStatements">إعداد قوائم مالية</a></li>
-                            <li><a class="dropdown-item" href="/Services/Tax">حساب الضريبة والزكاة</a></li>
-                            <li><a class="dropdown-item" href="/Services/Strategy">خطط استراتيجية</a></li>
-                            <li><a class="dropdown-item" href="/Services/Export">خطة تصديرية</a></li>
-                            <li><a class="dropdown-item" href="/Services/Marketing">خطة تسويق</a></li>
-                            <li><a class="dropdown-item" href="/Services/Financing">حلول تمويل</a></li>
+                            <li><a class="dropdown-item" href="/Services/AccountingBalance.html">مراجعة ميزانيات</a></li>
+                            <li><a class="dropdown-item" href="/Services/EstimatedBudgets.html">إعداد موازنات تقديريه</a></li>
+                            <li><a class="dropdown-item" href="/Services/FinancialStatements.html ">إعداد قوائم مالية</a></li>
+                            <li><a class="dropdown-item" href="/Services/Tax.html">حساب الضريبة والزكاة</a></li>
+                            <li><a class="dropdown-item" href="/Services/Strategy.html">خطط استراتيجية</a></li>
+                            <li><a class="dropdown-item" href="/Services/Export.html">خطة تصديرية</a></li>
+                            <li><a class="dropdown-item" href="/Services/Marketing.html">خطة تسويق</a></li>
+                            <li><a class="dropdown-item" href="/Services/Financing.html">حلول تمويل</a></li>
                         </ul>
                     </li>
                     
@@ -363,9 +100,9 @@
                             عالم التجارة والصناعة
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="/sections/SupportedProjects">مشروعات تدعمها الدولة</a></li>
-                            <li><a class="dropdown-item" href="/sections/MainProjects">اهم المشروعات</a></li>
-                            <li><a class="dropdown-item" href="/blogs">مقالات</a></li>
+                            <li><a class="dropdown-item" href="commerce/SupportedProjects.html">مشروعات تدعمها الدولة</a></li>
+                            <li><a class="dropdown-item" href="commerce/MainProjects.html">اهم المشروعات</a></li>
+                            <li><a class="dropdown-item" href="commerce/blogs.html">مقالات</a></li>
                         </ul>
                     </li>
                     
@@ -509,25 +246,24 @@
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h3 class="mb-3">هل لديك استفسارات عن برنامج الشراكة؟</h3>
-                    <p class="mb-lg-0">اتصل بنا اليوم واحصل على جميع التفاصيل التي تحتاجها للبدء في كسب الأرباح معنا.</p>
-                </div>
-                <div class="col-lg-4 text-lg-end">
-                    <a href="tel:+966544902462" class="btn btn-primary btn-lg">
-                        <i class="fas fa-phone-alt me-2"></i> اتصل بنا الآن
-                    </a>
-                </div>
+    <!-- CTA section -->
+    <section class="cta-section" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/map-lying-wooden-table.jpg'); background-size: cover; background-position: center; padding: 80px 0; position: relative; z-index: 1;">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 text-white"> <!-- Removed animate-on-scroll class for testing -->
+                <h2 class="mb-3" style="color: white !important;">هل لديك استفسارات عن برنامج الشراكة؟</h2>
+                <p class="mb-0" style="color: white !important;">تواصل معنا اليوم واحصل على استشارة مجانية من خبرائنا</p>
+            </div>
+            <div class="col-lg-4 text-lg-end"> <!-- Removed animate-on-scroll class for testing -->
+                <a href="contact.html" class="btn btn-light px-4">
+                    <i class="fas fa-paper-plane me-2"></i> تواصل معنا
+                </a>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Footer -->
-      <footer class="py-5 bg-dark text-white">
+   <footer class="py-5 bg-dark text-white">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
@@ -535,9 +271,9 @@
                     <div class="row">
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
-                                <li class="mb-2"><a href="/Home">الرئيسية</a></li>
-                                <li class="mb-2"><a href="/About">من نحن</a></li>
-                                <li class="mb-2"><a href="/sections/MainProjects">اهم المشروعات</a></li>
+                                <li class="mb-2"><a href="index.html">الرئيسية</a></li>
+                                <li class="mb-2"><a href="about.html">من نحن</a></li>
+                                <li class="mb-2"><a href="commerce/MainProjects.html">اهم المشروعات</a></li>
                                 <li class="mb-2"><a href="Invest.html">الفرص الاستثمارية</a></li>
                             </ul>
                         </div>
@@ -545,7 +281,7 @@
                             <ul class="list-unstyled footer-links">
                                 <li class="mb-2"><a href="EconomicDepartments.html">الاقسام الاقتصادية</a></li>
                                 <li class="mb-2"><a href="contact.html">تواصل معنا</a></li>
-                                <li class="mb-2"><a href="/blogs">المدونة</a></li>
+                                <li class="mb-2"><a href="commerce/blogs.html">المدونة</a></li>
                                 <li class="mb-2"><a href="ProfitWithUs.html">شاركنا الأرباح</a></li>
                             </ul>
                         </div>

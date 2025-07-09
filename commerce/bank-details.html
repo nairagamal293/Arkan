@@ -18,7 +18,7 @@
     
     <style>
         :root {
-            --primary-color: #2c3e50;
+            --primary-color: #41AED9;
             --secondary-color: #41AED9;
             --accent-color: #e74c3c;
             --light-color: #f8f9fa;
@@ -85,20 +85,20 @@
 </head>
 <body>
     <!-- Navigation (same as your main page) -->
-     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
-            <!-- Logo -->
-            <a class="navbar-brand" href="/Home">
+            <!-- Logo on the left -->
+            <a class="navbar-brand order-lg-1 me-lg-5" href="/Home">
                 <img style="width: 100px;" src="/images/011-3-removebg-preview.png" alt="أركان لدراسات الجدوى"> 
             </a>
             
             <!-- Toggler button -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler order-lg-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             
-            <!-- Nav items -->
-            <div class="collapse navbar-collapse" id="navbarNav">
+            <!-- Nav items in center -->
+            <div class="collapse navbar-collapse order-lg-2" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="../index.html"><i class="fas fa-home me-1"></i> الرئيسية</a>
@@ -113,31 +113,31 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><h6 class="dropdown-header">دراسات الجدوى</h6></li>
-                            <li><a class="dropdown-item" href="MarketingStudy.html">دراسة تسويقية</a></li>
-                            <li><a class="dropdown-item" href="DetailedStudy.html">دراسة فنية</a></li>
-                            <li><a class="dropdown-item" href="FinancialStudy.html">دراسة مالية</a></li>
+                            <li><a class="dropdown-item" href="../Services/MarketingStudy.html">دراسة تسويقية</a></li>
+                            <li><a class="dropdown-item" href="../Services/DetailedStudy.html">دراسة فنية</a></li>
+                            <li><a class="dropdown-item" href="../Services/FinancialStudy.html">دراسة مالية</a></li>
                             
                             <li><hr class="dropdown-divider"></li>
                             <li><h6 class="dropdown-header">تحليل السوق</h6></li>
-                            <li><a class="dropdown-item" href="Pricing.html">تحليل سعر المنتج</a></li>
-                            <li><a class="dropdown-item" href="Stability.html">تحليل الاستقرار السعري</a></li>
-                            <li><a class="dropdown-item" href="Competitors.html">دراسة منافسين</a></li>
+                            <li><a class="dropdown-item" href="../Services/Pricing.html">تحليل سعر المنتج</a></li>
+                            <li><a class="dropdown-item" href="../Services/Stability.html">تحليل الاستقرار السعري</a></li>
+                            <li><a class="dropdown-item" href="../Services/Competitors.html">دراسة منافسين</a></li>
                             
                             <li><hr class="dropdown-divider"></li>
                             <li><h6 class="dropdown-header">خطوط انتاج</h6></li>
-                            <li><a class="dropdown-item" href="European.html">أوروبية</a></li>
-                            <li><a class="dropdown-item" href="Chinese.html">صينية</a></li>
+                            <li><a class="dropdown-item" href="../Services/European.html">أوروبية</a></li>
+                            <li><a class="dropdown-item" href="../Services/Chinese.html">صينية</a></li>
                             
                             <li><hr class="dropdown-divider"></li>
                             <li><h6 class="dropdown-header">خدمات متنوعة</h6></li>
-                            <li><a class="dropdown-item" href="AccountingBalance.html">مراجعة ميزانيات</a></li>
-                            <li><a class="dropdown-item" href="EstimatedBudgets.html">إعداد موازنات تقديريه</a></li>
-                            <li><a class="dropdown-item" href="FinancialStatements.html">إعداد قوائم مالية</a></li>
-                            <li><a class="dropdown-item" href="Tax.html">حساب الضريبة والزكاة</a></li>
-                            <li><a class="dropdown-item" href="Strategy.html">خطط استراتيجية</a></li>
-                            <li><a class="dropdown-item" href="Export.html">خطة تصديرية</a></li>
-                            <li><a class="dropdown-item" href="Marketing.html">خطة تسويق</a></li>
-                            <li><a class="dropdown-item" href="Financing.html">حلول تمويل</a></li>
+                            <li><a class="dropdown-item" href="../Services/AccountingBalance.html">مراجعة ميزانيات</a></li>
+                            <li><a class="dropdown-item" href="../Services/EstimatedBudgets.html">إعداد موازنات تقديريه</a></li>
+                            <li><a class="dropdown-item" href="../Services/FinancialStatements.html">إعداد قوائم مالية</a></li>
+                            <li><a class="dropdown-item" href="../Services/Tax.html">حساب الضريبة والزكاة</a></li>
+                            <li><a class="dropdown-item" href="../Services/Strategy.html">خطط استراتيجية</a></li>
+                            <li><a class="dropdown-item" href="../Services/Export.html">خطة تصديرية</a></li>
+                            <li><a class="dropdown-item" href="../Services/Marketing.html">خطة تسويق</a></li>
+                            <li><a class="dropdown-item" href="../Services/Financing.html">حلول تمويل</a></li>
                         </ul>
                     </li>
                     
@@ -149,7 +149,7 @@
                         <a class="nav-link" href="../EconomicDepartments.html">الاقسام الاقتصادية</a>
                     </li>
                     
-                    <li class="nav-item dropdown">
+                    <li class="nav-item dropdown active">
                         <a class="nav-link dropdown-toggle" href="#" id="worldDropdown" role="button" data-bs-toggle="dropdown">
                             عالم التجارة والصناعة
                         </a>
@@ -161,18 +161,18 @@
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="ProfitWithUs.html">شاركنا الارباح</a>
+                        <a class="nav-link" href="../ProfitWithUs.html">شاركنا الارباح</a>
                     </li>
                     
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">تواصل معنا</a>
+                        <a class="nav-link" href="../contact.html">تواصل معنا</a>
                     </li>
                 </ul>
             </div>
             
-            <!-- Button -->
-            <div class="d-flex align-items-center">
-                <a href="contact.html" class="btn btn-primary">
+            <!-- Button on the right -->
+            <div class="d-flex align-items-center order-lg-4 ms-lg-3">
+                <a href="../contact.html" class="btn btn-primary">
                     <i class="fas fa-briefcase me-1"></i> استشارة مجانية
                 </a>
             </div>
@@ -225,7 +225,7 @@
 </div>
 
     <!-- Footer (same as your main page) -->
-<footer class="py-5 bg-dark text-white">
+  <footer class="py-5 bg-dark text-white">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
@@ -233,18 +233,18 @@
                     <div class="row">
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
-                                <li class="mb-2"><a href="/Home">الرئيسية</a></li>
-                                <li class="mb-2"><a href="/About">من نحن</a></li>
-                                <li class="mb-2"><a href="/sections/MainProjects">اهم المشروعات</a></li>
-                                <li class="mb-2"><a href="Invest.html">الفرص الاستثمارية</a></li>
+                                <li class="mb-2"><a href="../index.html">الرئيسية</a></li>
+                                <li class="mb-2"><a href="../about.html">من نحن</a></li>
+                                <li class="mb-2"><a href="MainProjects.html">اهم المشروعات</a></li>
+                                <li class="mb-2"><a href="../Invest.html">الفرص الاستثمارية</a></li>
                             </ul>
                         </div>
                         <div class="col-6">
                             <ul class="list-unstyled footer-links">
-                                <li class="mb-2"><a href="EconomicDepartments.html">الاقسام الاقتصادية</a></li>
-                                <li class="mb-2"><a href="contact.html">تواصل معنا</a></li>
-                                <li class="mb-2"><a href="/blogs">المدونة</a></li>
-                                <li class="mb-2"><a href="ProfitWithUs.html">شاركنا الأرباح</a></li>
+                                <li class="mb-2"><a href="../EconomicDepartments.html">الاقسام الاقتصادية</a></li>
+                                <li class="mb-2"><a href="../contact.html">تواصل معنا</a></li>
+                                <li class="mb-2"><a href="blogs.html">المدونة</a></li>
+                                <li class="mb-2"><a href="../ProfitWithUs.html">شاركنا الأرباح</a></li>
                             </ul>
                         </div>
                     </div>
@@ -355,7 +355,7 @@ const banksData = {
     "Maison des finances": {
         name: "دار تمويل",
         country: "مصر",
-        logo: "../images/11.jpeg",
+        logo: "../images/وظائف في شركة دار التمويل لاصحاب الخبره بالامارات العربية.jpeg",
         description: "دار تمويل هي مؤسسة تمويلية رائدة في مصر تقدم حلول تمويلية مبتكرة للشركات والأفراد. نقدم مجموعة واسعة من المنتجات المصممة خصيصًا لتلبية احتياجات عملائنا.",
         website: "https://www.example.com",
         phone: "+20 123 456 7890",

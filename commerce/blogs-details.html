@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>أهم المشروعات - أركان</title>
+    <title>مقالات - مكتب أركان لدراسات الجدوى الاقتصادية المفصلة</title>
     
-    <!-- Bootstrap 5 RTL -->
+     <!-- Bootstrap 5 RTL -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
     
     <!-- Font Awesome -->
@@ -17,9 +17,11 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
-           <link rel="stylesheet" href="../css/main.css"/> 
+      <link rel="stylesheet" href="../css/main.css"/> 
 
+    
     <style>
+        
         :root {
             --primary-color: #41AED9;
             --secondary-color: #000000;
@@ -37,12 +39,12 @@
         }
         
         /* Hero Section */
-        .projects-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/2148252130.jpg');
+        .blog-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/167088.jpg');
             background-size: cover;
             background-position: center;
-            height: 60vh;
-            min-height: 450px;
+            height: 50vh;
+            min-height: 350px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -51,112 +53,208 @@
             position: relative;
         }
         
-        .projects-hero-content {
+        .blog-hero-content {
             max-width: 800px;
             padding: 0 20px;
         }
         
-        .projects-hero h1 {
-            font-size: 3.5rem;
+        .blog-hero h1 {
+            font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 20px;
             text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-            animation: fadeInDown 1s ease;
         }
         
-        .projects-hero p {
-            font-size: 1.25rem;
+        /* Blog Content Section */
+        .blog-content-section {
+            padding: 60px 0;
+        }
+        
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .blog-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .blog-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .blog-meta {
+            color: #6c757d;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+        }
+        
+        .blog-date {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .blog-featured-image {
+            width: 100%;
+            height: 450px;
+            object-fit: cover;
+            border-radius: 10px;
             margin-bottom: 30px;
-            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
-            animation: fadeInUp 1s ease 0.3s both;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
         }
         
-        /* Projects Section */
-        .projects-section {
-            padding: 80px 0;
-            background-color: #ffffff;
+        .blog-body {
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        
+        .blog-body p {
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+        
+        .blog-body h2, .blog-body h3 {
+            color: var(--secondary-color);
+            margin: 30px 0 20px;
+            font-weight: 600;
+        }
+        
+        .blog-body h2 {
+            font-size: 1.8rem;
+            border-right: 4px solid var(--primary-color);
+            padding-right: 15px;
+        }
+        
+        .blog-body h3 {
+            font-size: 1.5rem;
+        }
+        
+        .blog-body ul {
+            padding-right: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .blog-body li {
+            margin-bottom: 10px;
+        }
+        
+        .quote-block {
+            border-right: 3px solid var(--primary-color);
+            padding: 20px;
+            background-color: #f8f9fa;
+            margin: 30px 0;
+            font-style: italic;
+        }
+        
+        /* Related Posts */
+        .related-posts {
+            background-color: #f9f9f9;
+            padding: 60px 0;
+            margin-top: 60px;
         }
         
         .section-title {
             position: relative;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
             color: var(--secondary-color);
             font-weight: 700;
+            text-align: center;
         }
         
         .section-title:after {
             content: '';
             position: absolute;
             bottom: -15px;
-            right: 0;
+            right: 50%;
+            transform: translateX(50%);
             width: 80px;
             height: 3px;
             background: var(--primary-color);
-            animation: lineGrow 1s ease-out;
         }
         
-        @keyframes lineGrow {
-            from { width: 0; }
-            to { width: 80px; }
-        }
-        
-        /* Project Cards */
-        .project-card {
-            border-radius: 15px;
+        .related-post-card {
+            border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             margin-bottom: 30px;
             background: white;
-            border: none;
             height: 100%;
         }
         
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(65, 174, 217, 0.2);
+        .related-post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(65, 174, 217, 0.15);
         }
         
-        .project-img {
-            height: 250px;
+        .related-post-img {
+            height: 200px;
             object-fit: cover;
             width: 100%;
-            transition: transform 0.5s ease;
         }
         
-        .project-card:hover .project-img {
-            transform: scale(1.05);
+        .related-post-body {
+            padding: 20px;
         }
         
-        .project-body {
-            padding: 25px;
-            position: relative;
-        }
-        
-        .project-title {
-            font-weight: 700;
-            margin-bottom: 15px;
+        .related-post-title {
+            font-weight: 600;
+            margin-bottom: 10px;
             color: var(--secondary-color);
+            font-size: 1.1rem;
         }
         
-        .project-text {
-            margin-bottom: 20px;
-            color: var(--text-color);
+        .related-post-meta {
+            color: #6c757d;
+            font-size: 0.85rem;
         }
         
-        .project-badge {
-            position: absolute;
-            top: -15px;
-            left: 20px;
-            background-color: var(--primary-color);
-            color: white;
-            padding: 5px 15px;
-            border-radius: 50px;
-            font-size: 0.9rem;
-            font-weight: 500;
+        /* Author Box */
+        .author-box {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            padding: 30px;
+            margin: 50px 0;
+            display: flex;
+            align-items: center;
         }
         
-         .cta-section {
+        .author-avatar {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-left: 20px;
+        }
+        
+        .author-info h4 {
+            font-weight: 600;
+            color: var(--secondary-color);
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: #6c757d;
+            margin-bottom: 10px;
+        }
+        
+        .social-links a {
+            color: var(--primary-color);
+            margin-left: 10px;
+            font-size: 1.2rem;
+        }
+        
+        /* Back to Blog */
+        .back-to-blog {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+            .cta-section {
         position: relative;
         color: white;
         text-align: right;
@@ -187,33 +285,7 @@
         transform: translateY(-3px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     }
-
-        /* Filter Buttons */
-        .filter-buttons {
-            margin-bottom: 40px;
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-        
-        .filter-btn {
-            border: 2px solid var(--primary-color);
-            background: transparent;
-            color: var(--primary-color);
-            padding: 8px 20px;
-            border-radius: 50px;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            cursor: pointer;
-        }
-        
-        .filter-btn:hover, .filter-btn.active {
-            background: var(--primary-color);
-            color: white;
-        }
-        
-        /* Buttons */
+    /* Buttons */
         .btn {
             font-weight: 500;
             padding: 0.6rem 1.5rem;
@@ -251,68 +323,69 @@
             transform: translateY(-3px);
             box-shadow: 0 10px 20px rgba(65, 174, 217, 0.3);
         }
-        
-        /* Animation Classes */
-        .animate-on-scroll {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
-        }
-        
-        .animate-on-scroll.animated {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        
-        .delay-1 {
-            transition-delay: 0.2s;
-        }
-        
-        .delay-2 {
-            transition-delay: 0.4s;
-        }
-        
-        .delay-3 {
-            transition-delay: 0.6s;
-        }
-        
+
         /* Responsive Adjustments */
         @media (max-width: 992px) {
-            .projects-hero h1 {
-                font-size: 2.5rem;
+            .blog-hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .blog-title {
+                font-size: 1.8rem;
             }
         }
         
         @media (max-width: 768px) {
-            .projects-hero {
-                height: 50vh;
-                min-height: 400px;
+            .blog-hero {
+                height: 40vh;
+                min-height: 300px;
             }
             
-            .projects-hero h1 {
-                font-size: 2rem;
+            .blog-hero h1 {
+                font-size: 1.8rem;
             }
             
-            .projects-hero p {
-                font-size: 1rem;
+            .blog-featured-image {
+                height: 350px;
+            }
+            
+            .author-box {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .author-avatar {
+                margin-left: 0;
+                margin-bottom: 20px;
             }
         }
         
         @media (max-width: 576px) {
-            .projects-hero {
-                height: 40vh;
-                min-height: 300px;
+            .blog-hero {
+                height: 35vh;
+                min-height: 250px;
+            }
+            
+            .blog-featured-image {
+                height: 250px;
+            }
+            
+            .blog-title {
+                font-size: 1.5rem;
+            }
+            
+            .blog-body h2 {
+                font-size: 1.4rem;
+            }
+            
+            .blog-body h3 {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/+966564879767" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-
-    <!-- Navigation Bar (Same as about page) -->
+    <!-- Navigation Bar (Same as your blog listing page) -->
     <nav class="navbar navbar-expand-lg navbar-light sticky-top">
         <div class="container">
             <!-- Logo on the left -->
@@ -407,73 +480,131 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="projects-hero">
-        <div class="projects-hero-content">
-            <h1 class="animate__animated animate__fadeInDown">أهم المشروعات</h1>
-            <p class="animate__animated animate__fadeInUp">اكتشف فرص استثمارية مميزة مع دراسات جدوى دقيقة واحترافية</p>
-            <div class="animate__animated animate__fadeInUp">
-                <a href="#projects" class="btn btn-primary me-2">تصفح المشروعات</a>
-                <a href="../contact.html" class="btn btn-outline-light">تواصل معنا</a>
+
+
+    <!-- Blog Content Section -->
+    <section class="blog-content-section">
+        <div class="container blog-container">
+            <div class="blog-header">
+                <h1 class="blog-title">دراسة الجدوى طريقك نحو مشروع مربح</h1>
+                <div class="blog-meta">
+                    <span class="blog-date"><i class="far fa-calendar-alt me-2"></i>5 فبراير 2020</span>
+                    <span class="mx-2">|</span>
+                    <span><i class="far fa-folder me-2"></i>دراسات الجدوى</span>
+                    <span class="mx-2">|</span>
+                    <span><i class="far fa-clock me-2"></i>قراءة 5 دقائق</span>
+                </div>
+            </div>
+            
+            <img src="../images/اركان.jpg" alt="دراسة الجدوى" class="blog-featured-image">
+            
+            <div class="blog-body">
+                <p>كثيراً ما يسعى العديد من المستثمرين إلي تنفيذ الكثير من المشاريع الاستثمارية ولكن يتسألون هل المشروع سيكون مربح وهل سيعود بدخل كبير ، لأن الشروع في تنفيذ مشروع تجاري جديد أو التوسع في سوق جديد أو إنتاج منتج جديد أمر قد يكون محفوف بالكثير من المخاطر خاصة في ظل التغيرات الاقتصادية الكبيرة ، لذلك يلجأ المستثمرين لإجراء دراسات الجدوى، ويعد تنفيذ دراسة جدوى إجراء مهم في تقييم تكاليف المشاريع الاستثمارية وتحديد العوائد التي سوف يجنيه المشروع وفوائدها ومخاطرها، وتساعد الدراسة في معرفة المناخ الاقتصادي للبلد التي من المفترض إقامة المشروع الاقتصادي بها ،كما تساعد في وضع خطة العمل وتحديد الفرص والعيوب واجتذاب المستثمرين وتحديد تكاليف وإيرادات العمليات المخطط إقامتها.</p>
+                
+                <h2>ما هي دراسة الجدوى؟</h2>
+                
+                <p>هي عبارة عن دراسة تقييمية وتحليلية يقوم بها أشخاص متخصصين ومؤهلين ويتم تطبيقها على فكرة جديدة لمشروع استثماري ، وذلك لتحديد التكلفة المالية للمشروع ومعدل العائد من هذا الاستثمار وتحديد نسبة المبيعات المتوقعة للمشروع وفترة استرداد رأس المال المدفوع في المشروع وفي النهاية معرفة إذا كان المشروع مُجدي اقتصادياً ويمكن تنفيذه على أرض الواقع.</p>
+                
+                <div class="quote-block">
+                    <p>تعتبر دراسة الجدوى هي حجر الزاوية في التقدم لإنشاء أي فكرة مشروع جديد وضمان النجاح في المشروع يجب الالتزام بما ينتج عن هذه الدراسة من توصيات وتعليمات.</p>
+                </div>
+                
+                <h2>أهداف دراسة الجدوى:</h2>
+                
+                <p>هناك العديد من الأهداف التي تكون مرهون تنفيذه بدراسة الجدوى للمشروع وسوف نعرض أبرز تلك الأهداف لدراسة الجدوى:</p>
+                
+                <h3>1. أهداف تنظيمية</h3>
+                <p>حيث يتم من خلال الدراسة تحديد أولويات وضروريات العمل وأساليبه وضع مجموعة من التغيرات أو التحديثات التي من الممكن للمشروع أن يفعله على أرض الواقع في المنظمة أو المؤسسة وقد يصل الأمر إلى تحديد الهيكل الإداري للمشروع.</p>
+                
+                <h3>2. أهداف فنية أو تقنية</h3>
+                <p>حيث يتم من خلال الدراسة تحديد ما يحتاجه المشروع من معدات وأجهزة ووسائل تقنية جديدة ، بالإضافة إلي إمكانية تحديد الحاجة إلى تطوير طرق التشغيل والاجهزة الموجودة مسبقاً في المنظمة ، وتساعد الدراسة رواد الأعمال في توفير العديد من الشركات التي تنتج خطوط الإنتاج في العالم وايصالها بهم.</p>
+                
+                <h3>3. أهداف اقتصادية</h3>
+                <p>يعتبر التخطيط الاقتصادي لأي مشروع استثماري أحد أهم الأساليب التي من الممكن إتباعها لتحقيق نجاح المشروع.</p>
+                
+                <h2>عناصر دراسة الجدوى الاقتصادية</h2>
+                
+                <p>يعتمد تحليل الجدوى الاقتصادية العديد من الخطوات ولكن يتم تقسيمها إلى مرحلتين أساسيتين وكل مرحلة توجد بها مجموعة من العناصر وسوف نوضحها كما يلي:</p>
+                
+                <h3>الدراسة الأولية</h3>
+                <p>وهي عبارة عن وثيقة مبسطة عن بيانات المشروع لكي تساعد على قبول فكرة المشروع أم رفضه ، في حالة قبول المشروع يتم تنفيذ الدراسة الشاملة.</p>
+                
+                <h3>الدراسة التفصيلية</h3>
+                <p>وهي عبارة عن النتائج الأولية التي تستخلص من الدراسة الأولي ، بالإضافة إلي بعض التفاصيل التي تتعلق بالمشروع ويتم تقسيمه إلي عناصر وهي:</p>
+                
+                <ul>
+                    <li><strong>دراسة الجدوى الفنية أو التقنية:</strong> وهي الدراسة التي تحدد العديد من العناصر الأساسية في المشروع مثل دراسة واختيار موقع تنفيذ المشروع، تخطيط ورسم العملية الإنتاجية ، واختيار طريقة الإنتاج ، بالإضافة إلى تحديد حاجة المشروع من ماكينات ومعدات بالإضافة إلي الخامات الأولية وتكاليف المشروع بالكامل.</li>
+                    <li><strong>دراسة الجدوى التسويقية:</strong> وهي التي تحدد معدل الطلب على السلع وهي تعد الأساس للدراسة الفنية وأي خطأ فيها سيؤدي إلي أخطاء مستمرة في الدراسة.</li>
+                    <li><strong>الدراسة المالية:</strong> ويتم ذلك عن طريق البحث عن الموارد المالية المحددة للمشروع والتكاليف.</li>
+                </ul>
+                
+                <!-- Author Box -->
+                <div class="author-box">
+                    <img src="../images/download (21).jpeg" alt="كاتب المقال" class="author-avatar">
+                    <div class="author-info">
+                        <h4>أحمد محمد</h4>
+                        <p>خبير دراسات جدوى اقتصادية مع أكثر من 10 سنوات خبرة</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fab fa-facebook"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="back-to-blog">
+                    <a href="blogs.html" class="btn btn-primary">
+                        <i class="fas fa-arrow-right me-2"></i> العودة إلى المدونة
+                    </a>
+                </div>
             </div>
         </div>
     </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
+    
+    <!-- Related Posts Section -->
+    <section class="related-posts">
         <div class="container">
-            <div class="row justify-content-center mb-5">
-                <div class="col-lg-8 text-center animate-on-scroll">
-                    <h2 class="section-title">مشروعات مميزة</h2>
-                    <p class="text-muted">اختر من بين مجموعة واسعة من المشروعات المدروسة بعناية</p>
-                </div>
-            </div>
+            <h2 class="section-title">مقالات ذات صلة</h2>
             
-            <!-- Filter Buttons -->
-            <div class="filter-buttons animate-on-scroll delay-1">
-                <button class="filter-btn active" data-filter="all">الكل</button>
-                <button class="filter-btn" data-filter="large">مشروعات كبيرة</button>
-                <button class="filter-btn" data-filter="medium">مشروعات متوسطة</button>
-                <button class="filter-btn" data-filter="small">مشروعات صغيرة</button>
-            </div>
-            
-            <!-- Projects Grid -->
-            <div class="row g-4">
-                <!-- Project 1 - Large -->
-                <div class="col-md-6 col-lg-4 animate-on-scroll" data-category="large">
-                    <div class="project-card">
-                        <img src="../images/مزرعة.jpg" alt="مشروع مزرعة غابات" class="project-img">
-                        <div class="project-body">
-                            <span class="project-badge">كبيرة</span>
-                            <h3 class="project-title">مشروع مزرعة غابات أشجار الخشب والورق</h3>
-                            <p class="project-text">مشروع ضخم لإنشاء مزرعة غابات لأشجار الخشب والورق بالمملكة العربية السعودية باستثمار 600 مليون دولار</p>
-                            <a href="/content/The project of forest plantation of wood and paper trees in the Kingdom with an investment of $ 600 million" class="btn btn-primary w-100">عرض التفاصيل</a>
+            <div class="row">
+                <!-- Related Post 1 -->
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../images/مشروع.jpg" alt="مقالة ذات صلة" class="related-post-img">
+                        <div class="related-post-body">
+                            <h3 class="related-post-title">كيف تبدأ مشروعك؟</h3>
+                            <p class="related-post-meta">
+                                <span class="blog-date"><i class="far fa-calendar-alt me-2"></i>5 فبراير 2020</span>
+                            </p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">قراءة المزيد</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 2 - Medium -->
-                <div class="col-md-6 col-lg-4 animate-on-scroll delay-1" data-category="medium">
-                    <div class="project-card">
-                        <img src="../images/مطعم.jpg" alt="سلسلة مطاعم" class="project-img">
-                        <div class="project-body">
-                            <span class="project-badge">متوسطة</span>
-                            <h3 class="project-title">سلسلة مطاعم كبرى داخل المملكة</h3>
-                            <p class="project-text">مشروع إنشاء سلسلة مطاعم متكاملة الخدمات في مختلف مدن المملكة باستثمار 900 ألف دولار</p>
-                            <a href="/content/A major restaurant chain in the Kingdom with an investment of 900 thousand dollars" class="btn btn-primary w-100">عرض التفاصيل</a>
+                <!-- Related Post 2 -->
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../images/اليوم الوطنى.jpg" alt="مقالة ذات صلة" class="related-post-img">
+                        <div class="related-post-body">
+                            <h3 class="related-post-title">مكتب أركان لدراسات الجدوى الاقتصادية المفصلة</h3>
+                            <p class="related-post-meta">
+                                <span class="blog-date"><i class="far fa-calendar-alt me-2"></i>23 سبتمبر 2019</span>
+                            </p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">قراءة المزيد</a>
                         </div>
                     </div>
                 </div>
                 
-                <!-- Project 3 - Medium -->
-                <div class="col-md-6 col-lg-4 animate-on-scroll delay-2" data-category="medium">
-                    <div class="project-card">
-                        <img src="../images/محمصة.jpg" alt="محمصة بن" class="project-img">
-                        <div class="project-body">
-                            <span class="project-badge">متوسطة</span>
-                            <h3 class="project-title">مشروع محمصة بن متكاملة</h3>
-                            <p class="project-text">مشروع متكامل لمحمصة بن عالية الجودة مع خط إنتاج وتوزيع باستثمار 400 ألف دولار</p>
-                            <a href="/content/The project of Banjazah investment of 400 thousand dollars" class="btn btn-primary w-100">عرض التفاصيل</a>
+                <!-- Related Post 3 -->
+                <div class="col-md-4">
+                    <div class="related-post-card">
+                        <img src="../images/اركان.jpg" alt="مقالة ذات صلة" class="related-post-img">
+                        <div class="related-post-body">
+                            <h3 class="related-post-title">مراحل عمل دراسة جدوى مشروع استثماري</h3>
+                            <p class="related-post-meta">
+                                <span class="blog-date"><i class="far fa-calendar-alt me-2"></i>4 أبريل 2019</span>
+                            </p>
+                            <a href="#" class="btn btn-outline-primary btn-sm">قراءة المزيد</a>
                         </div>
                     </div>
                 </div>
@@ -482,14 +613,15 @@
     </section>
 
     <!-- CTA Section -->
-   <section class="cta-section" style="background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/map-lying-wooden-table.jpg'); background-size: cover; background-position: center; padding: 80px 0;">
+   <!-- CTA Section -->
+<section class="cta-section" style="background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('../images/map-lying-wooden-table.jpg'); background-size: cover; background-position: center; padding: 80px 0; position: relative; z-index: 1;">
     <div class="container">
         <div class="row align-items-center">
-            <div class="col-lg-8 text-white animate-on-scroll">
-                <h2 class="mb-3">ما لديك مشروع خاص تريد دراسته؟</h2>
-                <p class="mb-0">تواصل معنا اليوم واحصل على دراسات جدوى مخصصة للمشروعات</p>
+            <div class="col-lg-8 text-white"> <!-- Removed animate-on-scroll class for testing -->
+                <h2 class="mb-3" style="color: white !important;">هل لديك استفسار عن دراسات الجدوى؟</h2>
+                <p class="mb-0" style="color: white !important;">تواصل معنا اليوم واحصل على استشارة مجانية من خبرائنا</p>
             </div>
-            <div class="col-lg-4 text-lg-end animate-on-scroll delay-1">
+            <div class="col-lg-4 text-lg-end"> <!-- Removed animate-on-scroll class for testing -->
                 <a href="contact.html" class="btn btn-light px-4">
                     <i class="fas fa-paper-plane me-2"></i> تواصل معنا
                 </a>
@@ -498,8 +630,8 @@
     </div>
 </section>
 
-    <!-- Footer (Same as about page) -->
-  <footer class="py-5 bg-dark text-white">
+    <!-- Footer -->
+   <footer class="py-5 bg-dark text-white">
         <div class="container">
             <div class="row g-4">
                 <div class="col-lg-4">
@@ -618,6 +750,7 @@
     </footer>
 
     <!-- Scripts -->
+ <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     
@@ -631,48 +764,6 @@
                 navbar.classList.remove('scrolled');
             }
         });
-
-        // Filter projects
-        document.querySelectorAll('.filter-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                
-                // Add active class to clicked button
-                button.classList.add('active');
-                
-                const filter = button.getAttribute('data-filter');
-                const projects = document.querySelectorAll('.col-md-6.col-lg-4');
-                
-                projects.forEach(project => {
-                    if (filter === 'all' || project.getAttribute('data-category') === filter) {
-                        project.style.display = 'block';
-                    } else {
-                        project.style.display = 'none';
-                    }
-                });
-            });
-        });
-
-        // Scroll animation for elements
-        function animateOnScroll() {
-            const elements = document.querySelectorAll('.animate-on-scroll');
-            
-            elements.forEach(element => {
-                const elementPosition = element.getBoundingClientRect().top;
-                const screenPosition = window.innerHeight / 1.2;
-                
-                if (elementPosition < screenPosition) {
-                    element.classList.add('animated');
-                }
-            });
-        }
-        
-        // Run animations when page loads and on scroll
-        window.addEventListener('load', animateOnScroll);
-        window.addEventListener('scroll', animateOnScroll);
         
         // Set current year in copyright
         document.getElementById('copyright-year').textContent = new Date().getFullYear();
