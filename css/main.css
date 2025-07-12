@@ -81,6 +81,31 @@
             color: var(--primary-color);
             padding-right: 2rem;
         }
+        /* Navbar dropdown scroll fix */
+.navbar .dropdown-menu {
+    max-height: 70vh; /* 70% of viewport height */
+    overflow-y: auto;
+    overscroll-behavior: contain; /* prevents scroll chaining */
+}
+
+/* Optional: Style the scrollbar */
+.navbar .dropdown-menu::-webkit-scrollbar {
+    width: 8px;
+}
+
+.navbar .dropdown-menu::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.navbar .dropdown-menu::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+}
+
+.navbar .dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: #3a9cc8;
+}
         
         .navbar-toggler {
             border: none;
