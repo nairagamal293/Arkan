@@ -1,6 +1,26 @@
 
         
-        /* Hero Section */
+        :root {
+            --primary-color: #41AED9;
+            --secondary-color: #41AED9;
+            --accent-color: #25d366;
+            --light-color: #f8f9fa;
+            --dark-color: #343a40;
+            --text-color: #495057;
+            --border-radius: 8px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease-in-out;
+        }
+        
+        body {
+            font-family: 'Tajawal', sans-serif;
+            color: var(--text-color);
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+       
+       
+       /* Hero Section */
         .service-hero {
             background: linear-gradient(135deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%),
                         url('../images/download\ \(17\).jpeg') center/cover no-repeat;
