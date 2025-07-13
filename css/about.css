@@ -2,7 +2,7 @@
         
         /* Hero Section */
         .about-hero {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/muslim-guy-checking-charts-data.jpg');
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/muslimguychecking.jpg');
             background-size: cover;
             background-position: center;
             height: 60vh;
